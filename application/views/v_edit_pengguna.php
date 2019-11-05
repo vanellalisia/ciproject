@@ -185,47 +185,59 @@
 			
 			<div class="card-body">
 				<?php foreach($penggunaEdit as $listPenggunaEdit){ ?>
-				<form action="<?php echo base_url().'Pengguna/updateData' ?>" method="POST">
-				<table>
-					<tr>
-						<td> id pengguna</td>
-						<td><input type="varchar" name="id" value="<?= $listPenggunaEdit->id_pengguna ?>" readonly></td>
-					<tr>
-						<td>nama pengguna</td>
-						<td><input type="text" name="nama" value="<?= $listPenggunaEdit->nama_pengguna ?>"></td>
-					<tr>
-						<td>jabatan</td>
-						<td>
-						<select name="jabatan" value="<?= $listPenggunaEdit->id_jabatan ?>">
-						<option value="PL">Pelanggan</option>
-						<option value="PT">Petugas Kantin</option>
-						</select>
-						</td>
-					<tr>
-						<td>email</td>
-						<td><input type="varchar" name="email" value="<?= $listPenggunaEdit->email_pengguna ?>"></td>
-					<tr>
-						<td>kata sandi</td>
-						<td><input type="varchar" name="sandi" value="<?= $listPenggunaEdit->kata_sandi ?>"></td>
-					<tr>
-						<td>no. telp</td>
-						<td><input type="numbers" name="telp" value="<?= $listPenggunaEdit->nomor_telepon ?>"></td>
-					<tr>
-						<td>alamat</td>
-						<td><input type="varchar" name="alamat" value="<?= $listPenggunaEdit->alamat_pengguna ?>"></td>
-					<tr>
-						<td>status</td>
-						<td><input type="numbers" name="status" value="<?= $listPenggunaEdit->status_pengguna ?>"></td>
-					<tr>
-						<td>tanggal masuk</td>
-						<td><input type="date" name="tanggal" value="<?= $listPenggunaEdit->tanggal_masuk ?>"></td>
-						
-					<tr>
-					<td></td>
-					<td><input type="submit" value="Update"></td>
-					<?php } ?>
+				<form action="<?php echo base_url().'Pengguna/updateData' ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 				
-				</table>
+				<div class="row form-group">
+                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">ID Pengguna</label></div>
+                                    <div class="col-12 col-md-9"><input type="varchar" id="text-input" name="id" placeholder="" class="form-control" value="<?= $listPenggunaEdit->id_pengguna ?>" readonly></div>
+                                </div>
+				
+				<div class="row form-group">
+                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Pengguna</label></div>
+                                    <div class="col-12 col-md-9"><input type="text" id="text-input" name="nama" placeholder="" class="form-control"value="<?= $listPenggunaEdit->nama_pengguna ?>"></div>
+                                </div>
+				<div class="row form-group">
+                                    <div class="col col-md-3"><label for="select" class=" form-control-label">Jabatan</label></div>
+                                    <div class="col-12 col-md-9">
+                                        <select name="jabatan" id="select" class="form-control" id="disabledSelect" disabled="">
+                                            <option value="PL">Pelanggan</option>
+                                            <option value="PT">Petugas Kantin</option>
+                                                                        
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="row form-group">
+                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Email</label></div>
+                                    <div class="col-12 col-md-9"><input type="varchar" id="text-input" name="email" placeholder="" class="form-control"value="<?= $listPenggunaEdit->email_pengguna ?>"></div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Kata Sandi</label></div>
+                                    <div class="col-12 col-md-9"><input type="varchar" id="text-input" name="sandi" placeholder="" class="form-control"value="<?= $listPenggunaEdit->kata_sanfi ?>"></div>
+                                </div>
+								<div class="row form-group">
+                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">No. Telp</label></div>
+                                    <div class="col-12 col-md-9"><input type="numbers" id="text-input" name="telp" placeholder="" class="form-control"value="<?= $listPenggunaEdit->nomor_telepon ?>"></div>
+                                </div>
+								<div class="row form-group">
+                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Alamat</label></div>
+                                    <div class="col-12 col-md-9"><input type="varchar" id="text-input" name="alamat" placeholder="" class="form-control"value="<?= $listPenggunaEdit->alamat_pengguna ?>"></div>
+                                </div>
+								<div class="row form-group">
+                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Status</label></div>
+                                    <div class="col-12 col-md-9"><input type="numbers" id="text-input" name="status" placeholder="" class="form-control"value="<?= $listPenggunaEdit->status_pengguna ?>"></div>
+                                </div>
+								<div class="row form-group">
+                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Masuk</label></div>
+                                    <div class="col-12 col-md-9"><input type="date" id="text-input" name="tanggal" placeholder="" class="form-control"value="<?= $listPenggunaEdit->tanggal_masuk ?>"></div>
+                                </div>
+                                                    
+                        </div>
+                        <div class="card-footer">
+                            <input type="submit" class="btn btn-primary btn-sm"value="Update">  
+                            <?php } ?>                             
+                        </div>
 				</form>
 				
 				
