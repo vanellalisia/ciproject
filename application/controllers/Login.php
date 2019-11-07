@@ -21,7 +21,11 @@ class Login extends CI_Controller{
 			error_log("b = " . $password);
 		$cek = $this->m_login->cek_login("pengguna",$where)->num_rows();
 		if($cek > 0){
-			$pengguna['id_pengguna']=$this->m_login->cek_pengguna("pengguna",$email);
+			foreach($id_pengguna as $pengguna){
+				echo $pengguna->id_pengguna;
+			}
+			$pengguna['id_pengguna']=$this->m_login->cek_pengguna("pengguna",$email)->result();
+			
 			$id_pengguna=$pengguna['id_pengguna'];//ini gimana ambil row dari db
 			$data_session = array(
 				'email_pengguna' => $email,
