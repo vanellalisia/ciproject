@@ -53,7 +53,7 @@
             </ul>
           </div>
           <div class="col-2 col-md-6 text-center">
-            <a href="index.html" class="site-logo">D</a>
+            <a href="index.html" class="site-logo"><img src="<?php echo base_url('assets/images/logoserviam2.png')?>"></a>
           </div>
           <div class="col-5 col-md-3 text-right menu-burger-wrap">
             <a href="#" class="site-nav-toggle js-site-nav-toggle"><i></i></a>
@@ -69,7 +69,7 @@
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-md-12" data-aos="fade-up">
-                  <h2 class="heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ipsa sint amet aliquam velit minima tenetur quisquam beatae molestiae possimus dicta.</h2>
+                  <h2 class="heading" align="center">Selamat Datang di Kantin Santa Ursula BSD</h2>
                 </div>
               </div>
             </div>
