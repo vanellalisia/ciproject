@@ -5,7 +5,7 @@
           <ul class="list-unstyled">
             <li class="active"><a href="<?php echo base_url('Dashboard/dashboard_pelanggan') ?>">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="<?php echo base_url('Menu_Pelanggan') ?>">Our Menu</a></li>
             <li><a href="blog.html">Our Blog</a></li>
             <li><a href="reservation.html">Reserve A Table</a></li>
             <li><a href="contact.html">Contact</a></li>
