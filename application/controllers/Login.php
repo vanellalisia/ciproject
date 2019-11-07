@@ -11,6 +11,7 @@ class Login extends CI_Controller{
     function aksi_login(){
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
+		
 		$where = array(
 			'email_pengguna' => $email,
 			'kata_sandi' => $password
@@ -20,15 +21,20 @@ class Login extends CI_Controller{
 			error_log("b = " . $password);
 		$cek = $this->m_login->cek_login("pengguna",$where)->num_rows();
 		if($cek > 0){
-
+			$pengguna=$this->m_login->cek_pengguna("pengguna",$email);
+			$id_pengguna=$pengguna['id_pengguna'];
 			$data_session = array(
 				'email_pengguna' => $email,
 				'status' => "login"
 				);
 			$this->session->set_userdata($data_session);
 			//$this->load->view('v_dashboard');
-			
-			redirect('Dashboard');
+			if($id_pengguna[0]=="PT"){
+				redirect('Dashboard');
+			}
+			else{
+				redirect('Dashboard/dashboard_pelanggan');
+			}
 
 		}
 		else{

@@ -65,7 +65,7 @@
       
       <div class="main-wrap">
         <div class="cover_1">
-          <div class="img_bg" style="background-image: url(../images/slider-1.jpg);" data-stellar-background-ratio="0.5">
+          <div class="img_bg" style="background-image: url(<?php echo base_url('assets/images/slider-1.jpg'); ?>);" data-stellar-background-ratio="0.5">
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-md-12" data-aos="fade-up">
@@ -153,7 +153,7 @@
             </div> <!-- .item -->
 
             <div class="d-flex item">
-              <div class="image order-2 order-md-1"  style="background-image: url(img/img_2.jpg);" data-aos="fade" data-aos-delay="100"></div>
+              <div class="image order-2 order-md-1"  style="background-image: url('<?php echo base_url('assets/images/img_2.jpg'); ?>');" data-aos="fade" data-aos-delay="100"></div>
               <div class="text order-1 order-md-2">
                 <h3>Organic Tomato Salad</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
@@ -162,7 +162,7 @@
             </div> <!-- .item -->
 
             <div class="d-flex item">
-              <div class="image order-1 order-md-2 order-lg-2 order-xl-1" style="background-image: url(img/img_3.jpg);" data-aos="fade" data-aos-delay="200"></div>
+              <div class="image order-1 order-md-2 order-lg-2 order-xl-1" style="background-image: url('<?php echo base_url('assets/images/img_3.jpg'); ?>');" data-aos="fade" data-aos-delay="200"></div>
               <div class="text order-2 order-md-1 order-lg-1 order-xl-2">
                 <h3>Flatbread</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
@@ -172,7 +172,7 @@
             </div> <!-- .item -->
 
             <div class="d-flex item">
-              <div class="image order-2" style="background-image: url(img/img_4.jpg);" data-aos="fade" data-aos-delay="300"></div>
+              <div class="image order-2" style="background-image: url('<?php echo base_url('assets/images/img_4.jpg'); ?>');" data-aos="fade" data-aos-delay="300"></div>
               <div class="text order-1 mb-3">
                 <h3>Rack Of Lamb</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
@@ -181,7 +181,7 @@
             </div> <!-- .item -->
 
             <div class="d-flex item">
-              <div class="image order-1 order-lg-1 order-xl-2" style="background-image: url(img/img_5.jpg);" data-aos="fade" data-aos-delay="400"></div>
+              <div class="image order-1 order-lg-1 order-xl-2" style="background-image: url('<?php echo base_url('assets/images/img_5.jpg'); ?>');" data-aos="fade" data-aos-delay="400"></div>
               <div class="text order-2 order-lg-2 order-xl-1">
                 <h3>Eggplant Parmigiana</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
@@ -190,7 +190,7 @@
             </div> <!-- .item -->
 
             <div class="d-flex item">
-              <div class="image order-2 order-md-1 order-lg-1 order-xl-2" style="background-image: url(img/img_6.jpg);" data-aos="fade" data-aos-delay="500"></div>
+              <div class="image order-2 order-md-1 order-lg-1 order-xl-2" style="background-image: url('<?php echo base_url('assets/images/img_6.jpg'); ?>');" data-aos="fade" data-aos-delay="500"></div>
               <div class="text order-1 order-md-2 order-lg-2 order-xl-1">
                 <h3>Spicy Meatballs</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
@@ -256,14 +256,14 @@
 
         <div class="site-half-wrap d-block d-lg-flex">
           <div class="block-half" data-aos="fade">
-            <div class="image-bg-fullwidth" style="background-image: url(img/img_1.jpg);"></div>
+            <div class="image-bg-fullwidth" style="background-image: url('<?php echo base_url('assets/images/img_1.jpg'); ?>');"></div>
             <div class="half d-block d-lg-flex">
               <div class="text">
                 <h2 class="mb-4">Feature Menu</h2>
                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet eos quasi, necessitatibus dicta. Temporibus odit sed quisquam commodi, in aut, repellendus porro saepe minus, enim obcaecati fugiat optio eaque odio?</p>
                 <p><a href="#" class="btn btn-primary btn-outline-primary">View All Menu</a></p>
               </div>
-              <div class="image" style="background-image: url(img/img_2.jpg);"></div>
+              <div class="image" style="background-image: url('<?php echo base_url('assets/images/img_2.jpg'); ?>');"></div>
             </div>
           </div>
           <div class="block-half"  data-aos="fade">
@@ -272,9 +272,9 @@
                 <h2 class="mb-4">Master Chef</h2>
                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet eos quasi, necessitatibus dicta. Temporibus odit sed quisquam commodi, in aut, repellendus porro saepe minus, enim obcaecati fugiat optio eaque odio?</p><p><a href="#" class="btn btn-primary btn-outline-primary">Meet Our chef</a></p>
               </div>
-              <div class="image" style="background-image: url(img/chef_1.jpg);"></div>
+              <div class="image" style="background-image: url('<?php echo base_url('assets/images/chef_1.jpg'); ?>');"></div>
             </div>
-            <div class="image-bg-fullwidth" style="background-image: url(img/chef_2.jpg);"></div>
+            <div class="image-bg-fullwidth" style="background-image: url('<?php echo base_url('assets/images/chef_1.jpg'); ?>');"></div>
           </div>
         </div>
 
@@ -434,71 +434,7 @@
           </div>
         </div>
 
-        <div class="section bg-light">
-          <div class="container">
-            <div class="row justify-content-center mb-5" data-aos="fade-up">
-              <div class="col-md-8  text-center">
-                <h2 class="mb-3">Events &amp; News</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga, alias distinctio voluptatum magni voluptatibus.</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="media d-block d-lg-flex mb-5"  data-aos="fade-up" data-aos-delay="100">
-                  <figure class="mr-4 horizontal">
-                    <img src="img/news_1.jpg" alt="Image placeholder" class="img-fluid">
-                  </figure>
-                  <div class="media-body">
-                    <h3><a href="#">Birthday Party Held in Diner Restaurant</a></h3>
-                    <p class="post-meta"><span><span class="fa fa-calendar"></span> April 22, 2018</span></p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus</p>
-                    <p><a href="#" class="btn btn-primary btn-outline-primary btn-sm">Read More</a></p>
-                  </div>
-                </div> <!-- .media -->
-
-                <div class="media d-block d-lg-flex mb-5"  data-aos="fade-up">
-                  <figure class="mr-4 horizontal">
-                    <img src="img/news_2.jpg" alt="Image placeholder" class="img-fluid" data-aos-delay="200">
-                  </figure>
-                  <div class="media-body">
-                    <h3><a href="#">Drinks Overload</a></h3>
-                    <p class="post-meta"><span><span class="fa fa-calendar"></span> April 22, 2018</span></p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus</p>
-                    <p><a href="#" class="btn btn-primary btn-outline-primary btn-sm">Read More</a></p>
-                  </div>
-                </div> <!-- .media -->
-
-                <div class="media d-block d-lg-flex mb-5"  data-aos="fade-up"  data-aos-delay="300">
-                  <figure class="mr-4 horizontal">
-                    <img src="img/img_1.jpg" alt="Image placeholder" class="img-fluid">
-                  </figure>
-                  <div class="media-body">
-                    <h3><a href="#">New Recipe: Steak Steak Steak.</a></h3>
-                    <p class="post-meta"><span><span class="fa fa-calendar"></span> April 22, 2018</span></p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus</p>
-                    <p><a href="#" class="btn btn-primary btn-outline-primary btn-sm">Read More</a></p>
-                  </div>
-                </div> <!-- .media -->
-
-
-              </div> <!-- .col-md-6 -->
-
-              <div class="col-lg-6">
-                <div class="media d-block mb-5" data-aos="fade-up"  data-aos-delay="400">
-                  <figure>
-                    <a href="#"><img src="img/news_1_large.jpg" alt="Image placeholder" class="img-fluid"></a>
-                  </figure>
-                  <div class="media-body">
-                    <h3><a href="#">Food that are best for your overall health</a></h3>
-                    <p class="post-meta"><span><span class="fa fa-calendar"></span> April 22, 2018</span></p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus</p>
-                    <p><a href="#" class="btn btn-primary btn-outline-primary btn-sm">Read More</a></p>
-                  </div>
-                </div> <!-- .media -->
-              </div>
-            </div>
-          </div>
-        </div> <!-- .section -->
+         <!-- .section -->
 
         <div class="section">
           <div class="container">
