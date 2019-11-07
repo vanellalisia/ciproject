@@ -3,7 +3,7 @@
       <nav class="site-menu">
         <div class="site-menu-inner">
           <ul class="list-unstyled">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li class="active"><a href="<?php echo base_url('Dashboard/dashboard_pelanggan') ?>">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="menu.html">Our Menu</a></li>
             <li><a href="blog.html">Our Blog</a></li>
