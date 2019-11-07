@@ -9,7 +9,7 @@ class Dashboard extends CI_Controller {
         $this->load->view('v_dashboard');
     }
     function dashboard_pelanggan(){
-        
+        $this->load->view('v_index_pelanggan');
     }
 }
 ?>
