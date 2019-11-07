@@ -27,10 +27,11 @@ class Login extends CI_Controller{
 			$this->session->set_userdata($data_session);
 			//$this->load->view('v_dashboard');
 			redirect('Dashboard');
-			echo 
+			
 			
 
-		}else{
+		}
+		else{
 			echo "Username dan password salah !";
 			
 		}
