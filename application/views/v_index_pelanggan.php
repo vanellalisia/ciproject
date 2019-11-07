@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/diner/css/bootstrap-datepicker.css')?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/diner/css/jquery.timepicker.css')?>">
 
-    <link rel="stylesheet" href="<?php echo base_url('assets/diner/ionicons/css/ionicons.min.css')?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/diner/fonts/ionicons/css/ionicons.min.css')?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/diner/fonts/fontawesome/css/font-awesome.min.css')?>">
 
     <link rel="stylesheet" href="<?php echo base_url('assets/diner/fonts/flaticon/font/flaticon.css')?>">
@@ -65,7 +65,7 @@
       
       <div class="main-wrap">
         <div class="cover_1">
-          <div class="img_bg" style="background-image: url(img/slider-1.jpg);" data-stellar-background-ratio="0.5">
+          <div class="img_bg" style="background-image: url(../images/slider-1.jpg);" data-stellar-background-ratio="0.5">
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-md-12" data-aos="fade-up">
@@ -143,7 +143,8 @@
 
           <div class="menus d-flex bg-light">
             <div class="d-flex item">
-              <div class="image" style="background-image: url(img/img_1.jpg);" data-aos="fade"></div>
+                
+              <div class="image" style="background-image: url('<?php echo base_url('assets/images/img_1.jpg'); ?>');" data-aos="fade"></div>
               <div class="text">
                 <h3>Grilled Egg With Garlic</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
@@ -211,7 +212,7 @@
                     <blockquote class="testimonial">
                       <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quaerat recusandae molestias incidunt sapiente sit numquam delectus mollitia! Non laudantium impedit voluptas consequatur corrupti. Cumque consequuntur nemo eos et error!&rdquo;</p>
                       <div class="author">
-                        <img src="img/person_1.jpg" alt="Image placeholder" class="mb-3">
+                        <img src="<?php echo base_url('assets/img/person_1.jpg')?>" alt="Image placeholder" class="mb-3">
                         <h4>Maxim Smith</h4>
                         <p>CEO, Founder</p>
                       </div>
@@ -221,7 +222,7 @@
                     <blockquote class="testimonial">
                       <p>&ldquo;Sint adipisci laborum dolorum ipsa quidem alias ipsum aperiam aut! Quis rerum soluta dolorem iure nihil velit error sequi? Dignissimos accusantium adipisci unde officia? Dolores aut sequi dolorum repellendus quod.&rdquo;</p>
                       <div class="author">
-                        <img src="img/person_2.jpg" alt="Image placeholder" class="mb-3">
+                        <img src="<?php echo base_url('assets/img/person_2.jpg')?>" alt="Image placeholder" class="mb-3">
                         <h4>Geert Green</h4>
                         <p>CEO, Founder</p>
                       </div>
@@ -231,7 +232,7 @@
                     <blockquote class="testimonial">
                       <p>&ldquo;Ratione alias iure ab facere quia aliquam dolor et voluptates esse nihil corporis distinctio hic ea quo ducimus autem cum amet. Quos accusamus iusto porro nulla temporibus numquam commodi soluta.&rdquo;</p>
                       <div class="author">
-                        <img src="img/person_3.jpg" alt="Image placeholder" class="mb-3">
+                        <img src="<?php echo base_url('assets/img/person_3.jpg')?>" alt="Image placeholder" class="mb-3">
                         <h4>Dennis Roman</h4>
                         <p>CEO, Founder</p>
                       </div>
@@ -241,7 +242,7 @@
                     <blockquote class="testimonial">
                       <p>&ldquo;Ad quod aspernatur ipsa. Numquam expedita delectus qui ad explicabo voluptas eos vel reiciendis magnam rerum quaerat quisquam accusantium quae saepe ipsam ullam ut ea molestiae porro. Recusandae veniam maxime.&rdquo;</p>
                       <div class="author">
-                        <img src="img/person_2.jpg" alt="Image placeholder" class="mb-3">
+                        <img src="<?php echo base_url('assets/img/person_2.jpg')?>" alt="Image placeholder" class="mb-3">
                         <h4>Geert Green</h4>
                         <p>CEO, Founder</p>
                       </div>
