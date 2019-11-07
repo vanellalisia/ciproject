@@ -20,6 +20,7 @@ class Login extends CI_Controller{
 			error_log("b = " . $password);
 		$cek = $this->m_login->cek_login("pengguna",$where)->num_rows();
 		if($cek > 0){
+			
 			$data_session = array(
 				'email_pengguna' => $email,
 				'status' => "login"
@@ -27,8 +28,6 @@ class Login extends CI_Controller{
 			$this->session->set_userdata($data_session);
 			//$this->load->view('v_dashboard');
 			redirect('Dashboard');
-			
-			
 
 		}
 		else{
