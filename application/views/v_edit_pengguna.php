@@ -79,7 +79,7 @@
                                         <select name="jabatan" id="select" class="form-control" id="disabledSelect" disabled="">
                                             <option value="PL">Pelanggan</option>
                                             <option value="PT">Petugas Kantin</option>
-                                                                        
+                                                                         
                                         </select>
                                     </div>
                                 </div>
