@@ -79,15 +79,7 @@
                     <?php
 										$i++;
 										} ?>
-                    <div class="d-block d-md-flex menu-food-item">
-                      <div class="text order-1 mb-3">
-                        <h3><a href="#">Key Wast Machos</a></h3>
-                        <p>Crisp tortilla and plantain chips covered with lightly spiced ground beef, melted cheese, pickled jalapeños, guacamole, sour cream and salsa.</p>
-                      </div>
-                      <div class="price order-2">
-                        <strong>$11.99</strong>
-                      </div>
-                    </div> <!-- .menu-food-item -->
+                     <!-- .menu-food-item -->
 
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">

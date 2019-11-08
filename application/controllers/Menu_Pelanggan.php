@@ -5,7 +5,9 @@ class Menu_Pelanggan extends CI_Controller{
         $this->load->model('m_menu_pelanggan');
     }
     function index(){
-        $this->load->view('v_menu_pelanggan');
+        $data['menu']=$this->m_menu_pelanggan->tampil_menu_pelanggan()->result();
+        $this->load->view('v_menu_pelanggan',$data);
     }
+
 }
 ?>
