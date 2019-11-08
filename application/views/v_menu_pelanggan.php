@@ -63,6 +63,8 @@
                 </ul>
                 <?php 
                 $i=0;
+                $j=0;
+                $k=0;
                 foreach($menu as $list){
                   if($list->id_jenis_menu =="MK"){
                 ?>
@@ -75,49 +77,44 @@
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
+                        <?php 	$i++;   ?>
                       </div>
                     </div> <!-- .menu-food-item -->
-                    <?php
-										$i++;
-										} ?>
+                    
                   </div>
                   
                   <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
-                    <?php if($list->id_jenis_menu =="MN"){ ?>
+                  <?php }else if($list->id_jenis_menu =="MN") ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
+                        <h3><a href="#"><?php { echo $list->nama_menu ?></a></h3>
                         <p>Spinach and artichokes in a creamy cheese dip with warm tortilla chips &amp; salsa.</p>
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
                       </div>
                     </div> <!-- .menu-food-item -->
-                    <?php $i++;}?>
-
-                    
-
-                    
-
-                    
-
+                    <?php $j++;}?>
                   </div>
                   <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
                     
                     <!-- .menu-food-item -->
 
                      <!-- .menu-food-item -->
-                     <?php if($list->id_jenis_menu =="SK"){ ?>
+                        
+                        <?php 
+                        else
+                         {?>
 
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
+                        <h3><a href="#"><?php  echo $list->nama_menu ?></a></h3>
                         <p>A heaping mountain of rings, handmade with Panko breading and shredded coconut flakes.</p>
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
                       </div>
-                    </div> <?php $i++;}}?><!-- .menu-food-item -->
+                    </div> <?php $k++;}}?><!-- .menu-food-item -->
 
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
