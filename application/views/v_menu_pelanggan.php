@@ -61,18 +61,24 @@
                     <a class="nav-link" id="pills-dinner-tab" data-toggle="pill" href="#pills-dinner" role="tab" aria-controls="pills-dinner" aria-selected="false">Snack</a>
                   </li>
                 </ul>
+                <?php 
+                $i=0;
+                foreach($menu as $list){
+                ?>
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <h3><a href="#">Warm Spinach Dip &amp; Chips</a></h3>
+                        <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
                         <p>Spinach and artichokes in a creamy cheese dip with warm tortilla chips &amp; salsa.</p>
                       </div>
                       <div class="price order-2">
-                        <strong>$10.49</strong>
+                        <strong><?php echo $list->harga_menu ?></strong>
                       </div>
                     </div> <!-- .menu-food-item -->
-
+                    <?php
+										$i++;
+										} ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
                         <h3><a href="#">Key Wast Machos</a></h3>
