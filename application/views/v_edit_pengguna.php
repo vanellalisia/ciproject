@@ -59,72 +59,71 @@
         </div>
 
         <div class="content mt-3">
-			
-			<div class="card-body">
+            <div class="animated fadeIn">
+
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Edit Pengguna</strong> 
+                    </div>
+                <div class="card-body card-block">
 				<?php foreach($penggunaEdit as $listPenggunaEdit){ ?>
-				<form action="<?php echo base_url().'Pengguna/updateData' ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
-				
-				<div class="row form-group">
-                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">ID Pengguna</label></div>
-                                    <div class="col-12 col-md-9"><input type="varchar" id="text-input" name="id" placeholder="" class="form-control" value="<?= $listPenggunaEdit->id_pengguna ?>" readonly></div>
-                                </div>
-				
-				<div class="row form-group">
-                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Pengguna</label></div>
-                                    <div class="col-12 col-md-9"><input type="text" id="text-input" name="nama" placeholder="" class="form-control"value="<?= $listPenggunaEdit->nama_pengguna ?>"></div>
-                                </div>
-				<div class="row form-group">
-                                    <div class="col col-md-3"><label for="select" class=" form-control-label">Jabatan</label></div>
-                                    <div class="col-12 col-md-9">
-                                        <select name="jabatan" id="select" class="form-control" id="disabledSelect" disabled="">
-                                            <option value="PL">Pelanggan</option>
-                                            <option value="PT">Petugas Kantin</option>
-                                                                        
-                                        </select>
-                                    </div>
-                                </div>
+                    <form action="<?php echo base_url().'Pengguna/updateData' ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                    <div class="row form-group">
+                        <div class="col col-md-3"><label for="select" class=" form-control-label">Jabatan</label></div>
+                        <div class="col-12 col-md-9">
+                            <select name="jabatan" id="jabatan" class="form-control">
+                                <option value="PL">Pelanggan</option>
+                                <option value="PT">Petugas</option>
                                 
-                                
-                                <div class="row form-group">
-                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Email</label></div>
-                                    <div class="col-12 col-md-9"><input type="varchar" id="text-input" name="email" placeholder="" class="form-control"value="<?= $listPenggunaEdit->email_pengguna ?>"></div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Kata Sandi</label></div>
-                                    <div class="col-12 col-md-9"><input type="varchar" id="text-input" name="sandi" placeholder="" class="form-control"value="<?= $listPenggunaEdit->kata_sanfi ?>"></div>
-                                </div>
-								<div class="row form-group">
-                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">No. Telp</label></div>
-                                    <div class="col-12 col-md-9"><input type="numbers" id="text-input" name="telp" placeholder="" class="form-control"value="<?= $listPenggunaEdit->nomor_telepon ?>"></div>
-                                </div>
-								<div class="row form-group">
-                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Alamat</label></div>
-                                    <div class="col-12 col-md-9"><input type="varchar" id="text-input" name="alamat" placeholder="" class="form-control"value="<?= $listPenggunaEdit->alamat_pengguna ?>"></div>
-                                </div>
-								<div class="row form-group">
-                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Status</label></div>
-                                    <div class="col-12 col-md-9"><input type="numbers" id="text-input" name="status" placeholder="" class="form-control"value="<?= $listPenggunaEdit->status_pengguna ?>"></div>
-                                </div>
-								<div class="row form-group">
-                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Masuk</label></div>
-                                    <div class="col-12 col-md-9"><input type="date" id="text-input" name="tanggal" placeholder="" class="form-control"value="<?= $listPenggunaEdit->tanggal_masuk ?>"></div>
-                                </div>
-                                                    
+                            </select>
                         </div>
-                        <div class="card-footer">
-                            <input type="submit" class="btn btn-primary btn-sm"value="Update">  
-                            <?php } ?>                             
-                        </div>
-				</form>
-				
-				
-				
-				
-				
-				
-				
-				
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">ID Pengguna</label></div>
+                        <div class="col-12 col-md-9"><input type="text" readonly id="text-input" name="id" placeholder="" class="form-control" value="<?= $listPenggunaEdit->id_pengguna ?>"></div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Pengguna</label></div>
+                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="nama" placeholder="" class="form-control"value="<?= $listPenggunaEdit->nama_pengguna ?>"></div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Email</label></div>
+                        <div class="col-12 col-md-9"><input type="email" id="text-input" name="email" placeholder="" class="form-control"value="<?= $listPenggunaEdit->email_pengguna ?>"></div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Kata sandi</label></div>
+                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="sandi" placeholder="" class="form-control"value="<?= $listPenggunaEdit->kata_sandi ?>"></div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nomor Telepon</label></div>
+                        <div class="col-12 col-md-9"><input type="numbers" id="text-input" name="telp" placeholder="" class="form-control"value="<?= $listPenggunaEdit->nomor_telepon ?>"></div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Alamat</label></div>
+                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="alamat" placeholder="" class="form-control"value="<?= $listPenggunaEdit->alamat_pengguna ?>"></div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Status</label></div>
+                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="status" placeholder="" class="form-control"value="<?= $listPenggunaEdit->status_pengguna ?>"></div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tanggal Masuk</label></div>
+                        <div class="col-12 col-md-9"><input type="date" id="text-input" name="tanggal" placeholder="" class="form-control"value="<?= $listPenggunaEdit->tanggal_masuk ?>"></div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <input type="submit" class="btn btn-primary btn-sm" value="Update">
+					<?php } ?>  
+                        
+</form>
+                                                        
+                </div>
             </div>
+        </div>                                        
+    </div>						
+            
+        </div>
 			
 			
             
