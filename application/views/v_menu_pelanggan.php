@@ -36,7 +36,7 @@
               <div class="row align-items-center justify-content-center">
                 <div class="col-md-7" data-aos="fade-up">
                   <h2 class="heading" align="center">Menu Kantin</h2>
-                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo saepe dolorum dolorem, iste officia voluptates! Sint repudiandae, soluta voluptatem delectus iure, eaque, harum expedita, nisi aliquam magni odio perferendis ipsum!</p>
+                  
                 </div>
               </div>
             </div>
@@ -48,7 +48,7 @@
             <div class="row justify-content-center">
               <div class="col-md-8" data-aos="fade-up">
 
-                <h2 class="mb-5 text-center">Menu List with Price</h2>
+                <h2 class="mb-5 text-center">Daftar Menu</h2>
 
                 <ul class="nav site-tab-nav" id="pills-tab" role="tablist">
                   <li class="nav-item">
@@ -199,129 +199,7 @@
           </div>
         </div> <!-- .section -->
 
-        <div class="section">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-md-7 text-center"  data-aos="fade-up">
-                <h2 class="mb-4">Our Specialties</h2>
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eum voluptatem odio expedita laborum fugit repudiandae dolorem consectetur.</p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- .section -->
-        
-        <div class="section pt-0 pb-0">
-
-          <div class="menus d-flex bg-light">
-            <div class="d-flex item">
-              <div class="image" style="background-image: url(img/img_1.jpg);" data-aos="fade"></div>
-              <div class="text">
-                <h3>Grilled Egg With Garlic</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
-                <p class="price">$5.00</p>
-              </div>
-            </div> <!-- .item -->
-
-            <div class="d-flex item">
-              <div class="image order-2 order-md-1"  style="background-image: url(img/img_2.jpg);" data-aos="fade" data-aos-delay="100"></div>
-              <div class="text order-1 order-md-2">
-                <h3>Organic Tomato Salad</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
-                <p class="price">$6.00</p>
-              </div>
-            </div> <!-- .item -->
-
-            <div class="d-flex item">
-              <div class="image order-1 order-md-2 order-lg-2 order-xl-1" style="background-image: url(img/img_3.jpg);" data-aos="fade" data-aos-delay="200"></div>
-              <div class="text order-2 order-md-1 order-lg-1 order-xl-2">
-                <h3>Flatbread</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
-                <p class="price">$9.00</p>
-                
-              </div>
-            </div> <!-- .item -->
-
-            <div class="d-flex item">
-              <div class="image order-2" style="background-image: url(img/img_4.jpg);" data-aos="fade" data-aos-delay="300"></div>
-              <div class="text order-1 mb-3">
-                <h3>Rack Of Lamb</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
-                <p class="price">$13.00</p>
-              </div>
-            </div> <!-- .item -->
-
-            <div class="d-flex item">
-              <div class="image order-1 order-lg-1 order-xl-2" style="background-image: url(img/img_5.jpg);" data-aos="fade" data-aos-delay="400"></div>
-              <div class="text order-2 order-lg-2 order-xl-1">
-                <h3>Eggplant Parmigiana</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
-                <p class="price">$9.00</p>
-              </div>
-            </div> <!-- .item -->
-
-            <div class="d-flex item">
-              <div class="image order-2 order-md-1 order-lg-1 order-xl-2" style="background-image: url(img/img_6.jpg);" data-aos="fade" data-aos-delay="500"></div>
-              <div class="text order-1 order-md-2 order-lg-2 order-xl-1">
-                <h3>Spicy Meatballs</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
-                <p class="price">$7.00</p>
-              </div>
-            </div> <!-- .item -->
-
-          </div>
-        </div> <!-- .section -->
-
-        <div class="section" data-aos="fade">
-          <div class="container">
-            <div class="row justify-content-center text-center" data-aos="fade-up">
-              <div class="col-md-8">
-                <div class="owl-carousel home-slider-loop-false">
-
-                
-                  <div class="item">
-                    <blockquote class="testimonial">
-                      <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quaerat recusandae molestias incidunt sapiente sit numquam delectus mollitia! Non laudantium impedit voluptas consequatur corrupti. Cumque consequuntur nemo eos et error!&rdquo;</p>
-                      <div class="author">
-                        <img src="img/person_1.jpg" alt="Image placeholder" class="mb-3">
-                        <h4>Maxim Smith</h4>
-                        <p>CEO, Founder</p>
-                      </div>
-                    </blockquote>
-                  </div>
-                  <div class="item">
-                    <blockquote class="testimonial">
-                      <p>&ldquo;Sint adipisci laborum dolorum ipsa quidem alias ipsum aperiam aut! Quis rerum soluta dolorem iure nihil velit error sequi? Dignissimos accusantium adipisci unde officia? Dolores aut sequi dolorum repellendus quod.&rdquo;</p>
-                      <div class="author">
-                        <img src="img/person_2.jpg" alt="Image placeholder" class="mb-3">
-                        <h4>Geert Green</h4>
-                        <p>CEO, Founder</p>
-                      </div>
-                    </blockquote>
-                  </div>
-                  <div class="item">
-                    <blockquote class="testimonial">
-                      <p>&ldquo;Ratione alias iure ab facere quia aliquam dolor et voluptates esse nihil corporis distinctio hic ea quo ducimus autem cum amet. Quos accusamus iusto porro nulla temporibus numquam commodi soluta.&rdquo;</p>
-                      <div class="author">
-                        <img src="img/person_3.jpg" alt="Image placeholder" class="mb-3">
-                        <h4>Dennis Roman</h4>
-                        <p>CEO, Founder</p>
-                      </div>
-                    </blockquote>
-                  </div>
-                  <div class="item">
-                    <blockquote class="testimonial">
-                      <p>&ldquo;Ad quod aspernatur ipsa. Numquam expedita delectus qui ad explicabo voluptas eos vel reiciendis magnam rerum quaerat quisquam accusantium quae saepe ipsam ullam ut ea molestiae porro. Recusandae veniam maxime.&rdquo;</p>
-                      <div class="author">
-                        <img src="img/person_2.jpg" alt="Image placeholder" class="mb-3">
-                        <h4>Geert Green</h4>
-                        <p>CEO, Founder</p>
-                      </div>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>  
+          
         </div> <!-- .section -->
 
   
