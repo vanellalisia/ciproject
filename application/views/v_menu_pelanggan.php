@@ -64,9 +64,26 @@
                 <?php 
                 $i=0;
                 foreach($menu as $list){
+                  if($list->id_jenis_menu =="MK"){
                 ?>
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
+                    <div class="d-block d-md-flex menu-food-item">
+                      <div class="text order-1 mb-3">
+                        <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
+                        <p></p>
+                      </div>
+                      <div class="price order-2">
+                        <strong><?php echo $list->harga_menu ?></strong>
+                      </div>
+                    </div> <!-- .menu-food-item -->
+                    <?php
+										$i++;
+										} ?>
+                  </div>
+                  
+                  <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
+                    <?php if($list->id_jenis_menu =="MN"){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
                         <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
@@ -76,107 +93,31 @@
                         <strong><?php echo $list->harga_menu ?></strong>
                       </div>
                     </div> <!-- .menu-food-item -->
-                    <?php
-										$i++;
-										} ?>
-                     <!-- .menu-food-item -->
+                    <?php $i++;}?>
 
-                    <div class="d-block d-md-flex menu-food-item">
-                      <div class="text order-1 mb-3">
-                        <h3><a href="#">Crispy Onions Rings</a></h3>
-                        <p>A heaping mountain of rings, handmade with Panko breading and shredded coconut flakes.</p>
-                      </div>
-                      <div class="price order-2">
-                        <strong>$11.99</strong>
-                      </div>
-                    </div> <!-- .menu-food-item -->
-
-                    <div class="d-block d-md-flex menu-food-item">
-                      <div class="text order-1 mb-3">
-                        <h3><a href="#">Lobster &amp; Shrimp Quesadilla</a></h3>
-                        <p>Lobster and tender shrimp, with onions, sweet peppers, spinach and our three cheese blend. Griddled and served with tomato salsa and sour cream.</p>
-                      </div>
-                      <div class="price order-2">
-                        <strong>$13.99</strong>
-                      </div>
-                    </div> <!-- .menu-food-item -->
-
-
-                  </div>
-                  <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
                     
-                    <div class="d-block d-md-flex menu-food-item">
-                      <div class="text order-1 mb-3">
-                        <h3><a href="#">Jumbo Lump Crab Stack</a></h3>
-                        <p>Spinach and artichokes in a creamy cheese dip with warm tortilla chips &amp; salsa.</p>
-                      </div>
-                      <div class="price order-2">
-                        <strong>$12.49</strong>
-                      </div>
-                    </div> <!-- .menu-food-item -->
 
-                    <div class="d-block d-md-flex menu-food-item">
-                      <div class="text order-1 mb-3">
-                        <h3><a href="#">Jamaican Chicken Wings</a></h3>
-                        <p>Crisp tortilla and plantain chips covered with lightly spiced ground beef, melted cheese, pickled jalapeños, guacamole, sour cream and salsa.</p>
-                      </div>
-                      <div class="price order-2">
-                        <strong>$15.99</strong>
-                      </div>
-                    </div> <!-- .menu-food-item -->
+                    
 
-                    <div class="d-block d-md-flex menu-food-item">
-                      <div class="text order-1 mb-3">
-                        <h3><a href="#">Bahamian Seafood Chowder</a></h3>
-                        <p>A heaping mountain of rings, handmade with Panko breading and shredded coconut flakes.</p>
-                      </div>
-                      <div class="price order-2">
-                        <strong>$10.99</strong>
-                      </div>
-                    </div> <!-- .menu-food-item -->
-
-                    <div class="d-block d-md-flex menu-food-item">
-                      <div class="text order-1 mb-3">
-                        <h3><a href="#">Grilled Chicken &amp; Tropical Fruit on Mixed Greens</a></h3>
-                        <p>Lobster and tender shrimp, with onions, sweet peppers, spinach and our three cheese blend. Griddled and served with tomato salsa and sour cream.</p>
-                      </div>
-                      <div class="price order-2">
-                        <strong>$12.99</strong>
-                      </div>
-                    </div> <!-- .menu-food-item -->
+                    
 
                   </div>
                   <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
                     
-                    <div class="d-block d-md-flex menu-food-item">
-                      <div class="text order-1 mb-3">
-                        <h3><a href="#">Grilled Top Sirlion Steak</a></h3>
-                        <p>Spinach and artichokes in a creamy cheese dip with warm tortilla chips &amp; salsa.</p>
-                      </div>
-                      <div class="price order-2">
-                        <strong>$18.99</strong>
-                      </div>
-                    </div> <!-- .menu-food-item -->
+                    <!-- .menu-food-item -->
+
+                     <!-- .menu-food-item -->
+                     <?php if($list->id_jenis_menu =="SK"){ ?>
 
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <h3><a href="#">Steak Oscar</a></h3>
-                        <p>Crisp tortilla and plantain chips covered with lightly spiced ground beef, melted cheese, pickled jalapeños, guacamole, sour cream and salsa.</p>
-                      </div>
-                      <div class="price order-2">
-                        <strong>$23.99</strong>
-                      </div>
-                    </div> <!-- .menu-food-item -->
-
-                    <div class="d-block d-md-flex menu-food-item">
-                      <div class="text order-1 mb-3">
-                        <h3><a href="#">Skirt Steak Churrasco</a></h3>
+                        <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
                         <p>A heaping mountain of rings, handmade with Panko breading and shredded coconut flakes.</p>
                       </div>
                       <div class="price order-2">
-                        <strong>$20.99</strong>
+                        <strong><?php echo $list->harga_menu ?></strong>
                       </div>
-                    </div> <!-- .menu-food-item -->
+                    </div> <?php $i++;}}?><!-- .menu-food-item -->
 
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
