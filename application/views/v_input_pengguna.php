@@ -69,7 +69,7 @@
                     </div>
                     <div class="row form-group">
                         <div class="col col-md-3"><label for="text-input" class=" form-control-label">ID Pengguna</label></div>
-                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="id" placeholder="" class="form-control"></div>
+                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="id" placeholder="" class="form-control"readonly value=""></div>
                     </div>
                     <div class="row form-group">
                         <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Pengguna</label></div>
@@ -145,6 +145,19 @@
             });
         })(jQuery);
     </script>
+	
+	<script>
+		function buatid(){
+			if(jabatan = PL){
+				
+				 
+			}
+			else{
+				
+			}
+		
+		}
+	</script>
 
 </body>
 
