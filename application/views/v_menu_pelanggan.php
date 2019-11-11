@@ -61,59 +61,41 @@
                     <a class="nav-link" id="pills-dinner-tab" data-toggle="pill" href="#pills-dinner" role="tab" aria-controls="pills-dinner" aria-selected="false">Snack</a>
                   </li>
                 </ul>
-                <?php 
-                $i=0;
-                $j=0;
-                $k=0;
-                foreach($menu as $list){
-                  if($list->id_jenis_menu =="MK"){
-                ?>
+                
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
+                        <?php
+                          
+                          foreach ($makanan as $list){ ?>
+                        <h3><a href="#"><?php echo $list->nama_menu;?></a></h3>
                         <p></p>
                       </div>
                       <div class="price order-2">
-                        <strong><?php echo $list->harga_menu ?></strong>
-                        <?php 	$i++;   }?>
+                        <strong><?php echo $list->harga_menu;?></strong> 
                       </div>
-                    </div> <!-- .menu-food-item -->
-                    
-                  </div>
-                  
-                  <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
-                  <?php if($list->id_jenis_menu =="MN") ?>
-                    <div class="d-block d-md-flex menu-food-item">
-                      <div class="text order-1 mb-3">
-                        <h3><a href="#"><?php { echo $list->nama_menu ?></a></h3>
-                        <p>Spinach and artichokes in a creamy cheese dip with warm tortilla chips &amp; salsa.</p>
-                      </div>
-                      <div class="price order-2">
-                        <strong><?php echo $list->harga_menu ?></strong>
-                      </div>
-                    </div> <!-- .menu-food-item -->
-                    <?php $j++;}?>
-                  </div>
-                  <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
-                    
-                    <!-- .menu-food-item -->
-
+                    </div>
                      <!-- .menu-food-item -->
-                        
-                        <?php if($list->id_jenis_menu =="SK") {?>
-
+                  </div>
+                  <?php } ?>
+                  <div class="tab-pane fade show active" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
+                  
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <h3><a href="#"><?php  echo $list->nama_menu ?></a></h3>
-                        <p>A heaping mountain of rings, handmade with Panko breading and shredded coconut flakes.</p>
+                      <?php
+                          foreach ($minuman as $list){ ?>
+                        <h3><a href="#"><?php echo $list->nama_menu;?></a></h3>
+                        <p></p>
                       </div>
                       <div class="price order-2">
-                        <strong><?php echo $list->harga_menu ?></strong>
+                        <strong><?php echo $list->harga_menu;?></strong>
                       </div>
-                    </div> <?php $k++;}}?><!-- .menu-food-item -->
+                    </div> <!-- .menu-food-item -->
 
+                  </div>
+                  <?php }; ?>
+                  <div class="tab-pane fade show active" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
                         <h3><a href="#">Grilled Beef Steak</a></h3>
