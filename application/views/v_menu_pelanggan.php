@@ -77,14 +77,14 @@
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
-                        <?php 	$i++;   ?>
+                        <?php 	$i++;   }?>
                       </div>
                     </div> <!-- .menu-food-item -->
                     
                   </div>
                   
                   <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
-                  <?php }if($list->id_jenis_menu =="MN") ?>
+                  <?php if($list->id_jenis_menu =="MN") ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
                         <h3><a href="#"><?php { echo $list->nama_menu ?></a></h3>
