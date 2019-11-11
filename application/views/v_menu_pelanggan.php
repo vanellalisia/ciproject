@@ -64,47 +64,44 @@
                 
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
+                    <?php foreach($makanan as $list){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <?php
-                          
-                          foreach ($makanan as $list){ ?>
-                        <h3><a href="#"><?php echo $list->nama_menu;?></a></h3>
-                        <p></p>
+                        <h3><?php echo $list->nama_menu ?></h3>
+                        <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?></p>
                       </div>
                       <div class="price order-2">
-                        <strong><?php echo $list->harga_menu;?></strong> 
+                        <strong><?php echo $list->harga_menu ?></strong>
                       </div>
-                    </div>
-                     <!-- .menu-food-item -->
-                  </div>
-                  <?php } ?>
-                  <div class="tab-pane fade show active" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
-                  
-                    <div class="d-block d-md-flex menu-food-item">
-                      <div class="text order-1 mb-3">
-                      <?php
-                          foreach ($minuman as $list){ ?>
-                        <h3><a href="#"><?php echo $list->nama_menu;?></a></h3>
-                        <p></p>
-                      </div>
-                      <div class="price order-2">
-                        <strong><?php echo $list->harga_menu;?></strong>
-                      </div>
+                    
                     </div> <!-- .menu-food-item -->
+                    <?php } ?>
+                  </div>
+
+                  <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
+                   <?php foreach($minuman as $list){ ?>
+                    <div class="d-block d-md-flex menu-food-item">
+                      <div class="text order-1 mb-3">
+                        <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
+                        <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?></p>
+                      </div>
+                      <div class="price order-2">
+                        <strong><?php echo $list->harga_menu ?></strong>
+                      </div>
+                    </div> <?php } ?><!-- .menu-food-item -->
 
                   </div>
-                  <?php }; ?>
-                  <div class="tab-pane fade show active" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
+                  <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
+                  <?php foreach($snack as $list){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <h3><a href="#">Grilled Beef Steak</a></h3>
-                        <p>Lobster and tender shrimp, with onions, sweet peppers, spinach and our three cheese blend. Griddled and served with tomato salsa and sour cream.</p>
+                        <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
+                        <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?></p>
                       </div>
                       <div class="price order-2">
-                        <strong>$20.99</strong>
+                        <strong><?php echo $list->harga_menu ?></strong>
                       </div>
-                    </div> <!-- .menu-food-item -->
+                    </div> <?php } ?><!-- .menu-food-item -->
 
                   </div>
                 </div>
