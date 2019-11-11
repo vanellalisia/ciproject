@@ -120,13 +120,13 @@
 
                   </div>
                 </div>
-
+                <input type="submit" value="Pesan" class="btn btn-primary">
 
               </div>
             </div>
           </div>
         </div> <!-- .section -->
-
+        
           
         </div> <!-- .section -->
 
