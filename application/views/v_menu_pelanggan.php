@@ -84,7 +84,7 @@
                   </div>
                   
                   <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
-                  <?php }else if($list->id_jenis_menu =="MN") ?>
+                  <?php }if($list->id_jenis_menu =="MN") ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
                         <h3><a href="#"><?php { echo $list->nama_menu ?></a></h3>
@@ -102,9 +102,7 @@
 
                      <!-- .menu-food-item -->
                         
-                        <?php 
-                        else
-                         {?>
+                        <?php if($list->id_jenis_menu =="SK") {?>
 
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
