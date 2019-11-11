@@ -72,8 +72,13 @@
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
+                        <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                      </select>
                       </div>
-                    
+                      
                     </div> <!-- .menu-food-item -->
                     <?php } ?>
                   </div>
@@ -83,10 +88,15 @@
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
                         <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
-                        <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?></p>
+                        <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?> </p>
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
+                        <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                      </select>
                       </div>
                     </div> <?php } ?><!-- .menu-food-item -->
 
@@ -96,10 +106,15 @@
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
                         <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
-                        <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?></p>
+                        <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?> </p>
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
+                        <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                      </select>
                       </div>
                     </div> <?php } ?><!-- .menu-food-item -->
 
