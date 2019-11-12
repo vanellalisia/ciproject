@@ -7,8 +7,8 @@
             
             <li><a href="<?php echo base_url('Menu_Pelanggan') ?>">Menu</a></li>
             <li><a href="<?php echo base_url('Pesanan_Pelanggan') ?>">Pesanan Anda</a></li>
-            <li><a href="reservation.html">Reserve A Table</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="reservation.html">Transaksi Anda</a></li>
+            <li><a href="contact.html">Logout</a></li>
           </ul>
         </div>
       </nav>
