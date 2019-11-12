@@ -61,7 +61,7 @@
                     <a class="nav-link" id="pills-dinner-tab" data-toggle="pill" href="#pills-dinner" role="tab" aria-controls="pills-dinner" aria-selected="false">Snack</a>
                   </li>
                 </ul>
-                
+                <form>
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
                     <?php foreach($makanan as $list){ ?>
@@ -72,7 +72,7 @@
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
-                        <select>
+                        <select id="pesanbanyakmakanan" name="pesanbanyakmakanan">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
@@ -92,7 +92,7 @@
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
-                        <select>
+                        <select id="pesanbanyakminuman" name="pesanbanyakminuman">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
@@ -110,7 +110,7 @@
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
-                        <select>
+                        <select id="pesanbanyaksnack" name="pesanbanyaksnackn">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
@@ -126,7 +126,7 @@
             </div>
           </div>
         </div> <!-- .section -->
-        
+                  </form>
           
         </div> <!-- .section -->
 
