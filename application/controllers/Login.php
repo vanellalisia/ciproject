@@ -14,32 +14,31 @@ class Login extends CI_Controller{
 		
 		$where = array(
 			'email_pengguna' => $email,
-			'kata_sandi' => $password
+			'kata_sandi' => $password,
+			//'id_jabatan'=>$jabatan
 			);
 
-			error_log("a = " . $email);
-			error_log("b = " . $password);
-		$cek = $this->m_login->cek_login("pengguna",$where)->num_rows();
-		if($cek > 0){
-			foreach($id_pengguna as $pengguna){
-				echo $pengguna->id_pengguna;
-			}
-			$pengguna['id_pengguna']=$this->m_login->cek_pengguna("pengguna",$email)->result();
 			
-			$id_pengguna=$pengguna['id_pengguna'];//ini gimana ambil row dari db
+		$cek = $this->m_login->cek_login("pengguna",$where)->num_rows();
+
+		if($cek > 0){
+			$jabatan['ini'] = $this->m_login->cek_pengguna("pengguna", $email)->result_array();
 			$data_session = array(
 				'email_pengguna' => $email,
 				'status' => "login"
+				
 				);
 			$this->session->set_userdata($data_session);
-			//$this->load->view('v_dashboard');
-			if($id_pengguna[0]=="PT"){
+			//echo $jabatan['ini'][0]['id_jabatan'];
+			
+			if($jabatan['ini'][0]['id_jabatan']=="PT"){
+				
 				redirect('Dashboard');
 			}
 			else{
 				redirect('Dashboard/dashboard_pelanggan');
-			}
-
+			
+			}	
 		}
 		else{
 			echo "Username dan password salah !";
