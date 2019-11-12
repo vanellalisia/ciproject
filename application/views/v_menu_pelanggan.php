@@ -49,7 +49,7 @@
               <div class="col-md-8" data-aos="fade-up">
 
                 <h2 class="mb-5 text-center">Daftar Menu</h2>
-
+                <p align="center"> untuk <?php echo date("l "."d/m/Y", strtotime("tomorrow")); ?></p>
                 <ul class="nav site-tab-nav" id="pills-tab" role="tablist">
                   <li class="nav-item">
                     <a class="nav-link active" id="pills-breakfast-tab" data-toggle="pill" href="#pills-breakfast" role="tab" aria-controls="pills-breakfast" aria-selected="true">Makanan</a>
