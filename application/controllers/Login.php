@@ -22,7 +22,7 @@ class Login extends CI_Controller{
 		$cek = $this->m_login->cek_login("pengguna",$where)->num_rows();
 
 		if($cek > 0){
-			$jabatan['ini'] = $this->m_login->cek_pengguna("pengguna", $email)->result_array();
+			$jabatan['ini'] = $this->m_login->cek_pengguna("pengguna", $email)->result_array(); //masuki ke dlm array makanya ga perlu pk foreach
 			$data_session = array(
 				'email_pengguna' => $email,
 				'status' => "login"
