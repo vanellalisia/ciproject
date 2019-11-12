@@ -4,9 +4,9 @@
         <div class="site-menu-inner">
           <ul class="list-unstyled">
             <li class="active"><a href="<?php echo base_url('Dashboard/dashboard_pelanggan') ?>">Halaman Utama</a></li>
-            <li><a href="about.html">About Us</a></li>
+            
             <li><a href="<?php echo base_url('Menu_Pelanggan') ?>">Menu</a></li>
-            <li><a href="blog.html">Pesanan Anda</a></li>
+            <li><a href="<?php echo base_url('Pesanan_Pelanggan') ?>">Pesanan Anda</a></li>
             <li><a href="reservation.html">Reserve A Table</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
