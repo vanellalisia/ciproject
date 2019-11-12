@@ -61,7 +61,7 @@
                     <a class="nav-link" id="pills-dinner-tab" data-toggle="pill" href="#pills-dinner" role="tab" aria-controls="pills-dinner" aria-selected="false">Snack</a>
                   </li>
                 </ul>
-                <form>
+                <form method="POST" action="<?php echo base_url().'Menu_Pelanggan/ambil_pesanan_menu' ?>">
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
                     <?php foreach($makanan as $list){ ?>

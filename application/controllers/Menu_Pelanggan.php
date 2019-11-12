@@ -11,6 +11,9 @@ class Menu_Pelanggan extends CI_Controller{
         $this->load->view('v_menu_pelanggan',$data);
         
     }
+    function ambil_pesanan_menu(){
+        
+    }
 
 }
 ?>
