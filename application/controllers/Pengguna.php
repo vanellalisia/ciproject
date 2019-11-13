@@ -96,5 +96,18 @@ class Pengguna extends CI_Controller {
 		$this->m_pengguna->hapusRecord($where,'pengguna');
 		redirect('Pengguna');
 	}
+	
+	function getPenggunaByAjax(){
+		$id = $this->input->post('id_pengguna');
+		$where = array('id_pengguna'=>$id);
+		$data = $this->m_pengguna->get_pengguna_by_ajax($where);
+		echo json_encode($data);
+	}
+	
+	
+	
+	
+	
+	
 }
 ?>
