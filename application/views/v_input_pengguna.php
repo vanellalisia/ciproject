@@ -6,6 +6,45 @@
 <html class="no-js" lang="en">
 <!--<![endif]-->
 
+
+<script>
+
+$(document).ready(function() {
+
+  $('#id_pengguna').change(function() {
+
+    var id_pengguna = $(this).val();
+
+    $.ajax({
+
+      type: 'POST',
+
+      url: "http://localhost/web2Kantin/ciproject/Pengguna/getPenggunaByAjax",
+
+	  dataType : "JSON",
+
+	  data : {id_pengguna:id_pengguna},
+
+      success: function(data){
+		  
+		  
+
+                 $.each(data,function(){
+
+				$('[name="jurusan"]').val(data.jurusan);
+
+
+				});
+			}
+		});
+
+	});
+	
+	
+});
+
+</script>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
