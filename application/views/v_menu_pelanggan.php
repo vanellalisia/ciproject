@@ -116,7 +116,7 @@
                       </select>
                       </div>
                    </div>
-                    </div> <?php $j++ } ?><!-- .menu-food-item -->
+                    </div> <?php $j++; } ?><!-- .menu-food-item -->
 
                   </div>
                   <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
