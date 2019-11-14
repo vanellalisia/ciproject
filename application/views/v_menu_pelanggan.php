@@ -64,27 +64,39 @@
                 <form method="POST" action="<?php echo base_url().'Menu_Pelanggan/ambil_pesanan_menu' ?>">
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
-                    <?php foreach($makanan as $list){ ?>
+                    <?php
+                    $i = 1;
+                    foreach($makanan as $list){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
                         <input type="hidden" name="id_menu[]" value="<?php echo $list->id_menu?>">
                         <h3><?php echo $list->nama_menu ?></h3>
+
                         <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?></p>
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
-                        
-                          
-                        
-                    
+                        <div class="form-field-icon-wrap">
+                        <span class="icon ion-android-arrow-dropdown"></span>
+                        <select id="pesanbanyakmakanan" name="pesanbanyakmakanan<?=$i?>" class="form-control">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
                       </div>
-                      <input type="checkbox" class="form-check-input" id="checkmakanan">
+                      
                     </div> <!-- .menu-food-item -->
-                    <?php } ?>
+                    <?php 
+                  $i++;
+                  } ?>
                   </div>
 
                   <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
-                   <?php foreach($minuman as $list){ ?>
+                   <?php 
+                   $j=0;
+                   foreach($minuman as $list){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
                         <input type="hidden" name="id_menu[]" value="<?php echo $list->id_menu?>">
@@ -93,10 +105,16 @@
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
-                        
+                        <div class="form-field-icon-wrap">
+                        <span class="icon ion-android-arrow-dropdown"></span>
+                        <select id="pesanbanyakminuman" name="pesanbanyakminuman<?=$j?>" class="form-control">
+                        <option value="">0</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                      </select>
+                      </div>
                    </div>
-                   <input type="checkbox" class="form-check-input" id="checkminuman">
-                    </div> <?php } ?><!-- .menu-food-item -->
+                    </div> <?php $j++ } ?><!-- .menu-food-item -->
 
                   </div>
                   <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
@@ -109,8 +127,15 @@
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
-
-                  </div> <input type="checkbox" class="form-check-input" id="checksnack">
+                        <div class="form-field-icon-wrap">
+                        <span class="icon ion-android-arrow-dropdown"></span>
+                        <select id="pesanbanyaksnack" name="pesanbanyaksnack[]" class="form-control">
+                        <option value="">0</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                      </select>
+                      </div>
+                  </div>
                     </div> <?php } ?><!-- .menu-food-item -->
 
                   </div>
