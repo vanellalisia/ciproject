@@ -31,7 +31,7 @@ $(document).ready(function() {
 
                  $.each(data,function(){
 
-				$('[name="jurusan"]').val(data.jurusan);
+				$('[name="id_pengguna]').val(data.id_pengguna);
 
 
 				});
