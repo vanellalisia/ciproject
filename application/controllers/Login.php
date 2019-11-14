@@ -35,9 +35,12 @@ class Login extends CI_Controller{
 				
 				redirect('Dashboard');
 			}
-			else{
+			else if ($jabatan['ini'][0]['id_jabatan']=="PL"){
 				redirect('Dashboard/dashboard_pelanggan');
 			
+			}
+			else {
+				echo "Username dan password salah !";
 			}	
 		}
 		else{
