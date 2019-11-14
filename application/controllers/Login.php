@@ -22,9 +22,10 @@ class Login extends CI_Controller{
 		$cek = $this->m_login->cek_login("pengguna",$where)->num_rows();
 
 		if($cek > 0){
-			$jabatan['ini'] = $this->m_login->cek_pengguna("pengguna", $email)->result_array(); //masuki ke dlm array makanya ga perlu pk foreach
+			$jabatan['ini'] = $this->m_login->cek_pengguna("pengguna", $email, $password)->result_array(); //masuki ke dlm array makanya ga perlu pk foreach
 			$data_session = array(
 				'email_pengguna' => $email,
+				'kata_sandi' =>$password,
 				'status' => "login"
 				
 				);
@@ -32,7 +33,6 @@ class Login extends CI_Controller{
 			//echo $jabatan['ini'][0]['id_jabatan'];
 			
 			if($jabatan['ini'][0]['id_jabatan']=="PT"){
-				
 				redirect('Dashboard');
 			}
 			else if ($jabatan['ini'][0]['id_jabatan']=="PL"){
