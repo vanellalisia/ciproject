@@ -67,22 +67,18 @@
                     <?php foreach($makanan as $list){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <input type="hidden" value="<?php echo $list->id_menu?>">
+                        <input type="hidden" name="id_menu[]" value="<?php echo $list->id_menu?>">
                         <h3><?php echo $list->nama_menu ?></h3>
                         <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?></p>
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
-                        <div class="form-field-icon-wrap">
-                        <span class="icon ion-android-arrow-dropdown"></span>
-                        <select id="pesanbanyakmakanan" name="pesanbanyakmakanan" class="form-control">
-                        <option value="">0</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                      </select>
-                    </div>
+                        
+                          
+                        
+                    
                       </div>
-                      
+                      <input type="checkbox" class="form-check-input" id="checkmakanan">
                     </div> <!-- .menu-food-item -->
                     <?php } ?>
                   </div>
@@ -91,21 +87,15 @@
                    <?php foreach($minuman as $list){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <input type="hidden" value="<?php echo $list->id_menu?>">
+                        <input type="hidden" name="id_menu[]" value="<?php echo $list->id_menu?>">
                         <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
                         <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?> </p>
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
-                        <div class="form-field-icon-wrap">
-                        <span class="icon ion-android-arrow-dropdown"></span>
-                        <select id="pesanbanyakminuman" name="pesanbanyakminuman" class="form-control">
-                        <option value="">0</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                      </select>
-                      </div>
+                        
                    </div>
+                   <input type="checkbox" class="form-check-input" id="checkminuman">
                     </div> <?php } ?><!-- .menu-food-item -->
 
                   </div>
@@ -113,21 +103,14 @@
                   <?php foreach($snack as $list){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <input type="hidden" value="<?php echo $list->id_menu?>">
+                        <input type="hidden" name="id_menu[]" value="<?php echo $list->id_menu?>">
                         <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
                         <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?> </p>
                       </div>
                       <div class="price order-2">
                         <strong><?php echo $list->harga_menu ?></strong>
-                        <div class="form-field-icon-wrap">
-                        <span class="icon ion-android-arrow-dropdown"></span>
-                        <select id="pesanbanyaksnack" name="pesanbanyaksnack" class="form-control">
-                        <option value="">0</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                      </select>
-                      </div>
-                  </div>
+
+                  </div> <input type="checkbox" class="form-check-input" id="checksnack">
                     </div> <?php } ?><!-- .menu-food-item -->
 
                   </div>
