@@ -99,7 +99,9 @@
                    foreach($minuman as $list){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <input type="hidden" name="id_menu[]" value="<?php echo $list->id_menu?>">
+                        <input type="hidden" name="id_menu" value="<?php echo $list->id_menu?>">
+                        <input type="hidden" name="nama_menu" value="<?php echo $list->nama_menu?>">
+                        <input type="hidden" name="harga_menu" value="<?php echo $list->harga_menu?>">
                         <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
                         <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?> </p>
                       </div>
