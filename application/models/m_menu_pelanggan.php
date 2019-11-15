@@ -9,4 +9,7 @@ class m_menu_pelanggan extends CI_Model{
     function tampil_snack_pelanggan(){
         return $this->db->query("SELECT * FROM menu WHERE id_jenis_menu='SK'");
     }
+    function tampil_pesanan(){
+
+    }
 }
