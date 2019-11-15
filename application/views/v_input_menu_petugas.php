@@ -6,6 +6,46 @@
 <html class="no-js" lang="en">
 <!--<![endif]-->
 
+
+<script>
+
+$(document).ready(function() {
+
+  $('#id_menu').change(function() {
+
+    var id_menu = $(this).val();
+
+    $.ajax({
+
+      type: 'POST',
+
+      url: "http://localhost/web2Kantin/ciproject/Menu/getMenuByAjax",
+
+	  dataType : "JSON",
+
+	  data : {id_menu:id_menu},
+
+      success: function(data){
+		  
+		  
+
+                 $.each(data,function(){
+
+				$('[name="id_menu]').val(data.id_menu);
+
+
+				});
+			}
+		});
+
+	});
+	
+	
+});
+
+</script>
+
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,7 +110,7 @@
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="text-input" class=" form-control-label">ID Menu</label></div>
-                                    <div class="col-12 col-md-9"><input type="varchar" id="text-input" name="id" placeholder="" class="form-control"></div>
+                                    <div class="col-12 col-md-9"><input type="varchar" id="text-input" name="id" placeholder="" class="form-control" readonly value=""></div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Menu</label></div>
