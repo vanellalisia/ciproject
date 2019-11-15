@@ -185,18 +185,7 @@ $(document).ready(function() {
         })(jQuery);
     </script>
 	
-	<script>
-		function buatid(){
-			if(jabatan = PL){
-				
-				 
-			}
-			else{
-				
-			}
-		
-		}
-	</script>
+	
 
 </body>
 
