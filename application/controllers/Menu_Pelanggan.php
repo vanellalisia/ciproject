@@ -11,7 +11,7 @@ class Menu_Pelanggan extends CI_Controller{
         $this->load->view('v_menu_pelanggan',$data);
         
     }
-    function ambil_pesanan_menu(){
+    function ambil_pesanan_menu($i){
         $bataslooping = $this->input->post($i);
 
         for($a=1; $a>= $bataslooping ; $a++)
@@ -27,11 +27,9 @@ class Menu_Pelanggan extends CI_Controller{
                 //$this->M-Menu->insertData($pesanan,'pesanan',$data);//insert data ke tabel pesanan
                 }
         }
-
-
             $data =  $this->m_menu_pelanggan->tampil_pesanan();
-        //$this->load->view('v_pesan_pilihwaktu',$data);
+            $this->load->view('v_pesan_pilihwaktu',$data);
     }
-
+   
 }
 ?>
