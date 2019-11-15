@@ -22,6 +22,23 @@ class m_menu extends CI_Model{
 		$this->db->delete($table);
 	}
 	
+	function get_menu_by_ajax($where){
+		$query = $this->db->get_where('menu',$where);
+		if($query->num_rows()>0){
+			foreach($query->result() as $data){
+				$output=array(
+					'id_menu' => $data->id_menu);
+			}
+		}
+		return $output;
+		
+		
+		
+		
+		
+		
+	}
+	
 	
 }
 
