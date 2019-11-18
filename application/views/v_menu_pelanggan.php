@@ -141,10 +141,15 @@
                       </div>
                   </div>
                     </div> <?php } ?><!-- .menu-food-item -->
-
+                    <select id="waktuambil" name="waktuambil" class="form-control">
+                        <option value="">09.15</option>
+                        <option value="">11.45</option>
+                        <option value="">13.30</option>
+                      </select>
+                    <input type="submit" value="Pesan" class="btn btn-primary">
                   </div>
                 </div>
-                <input type="submit" value="Pesan" class="btn btn-primary">
+                
 
               </div>
             </div>
