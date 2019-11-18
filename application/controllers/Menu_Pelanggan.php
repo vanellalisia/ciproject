@@ -14,9 +14,13 @@ class Menu_Pelanggan extends CI_Controller{
     function ambil_pesanan_menu(){
         $bataslooping = $this->input->post($i);
         $totalharga=0;
+        $tanggalpesan=date("l"."Y,m,d");
+        $urutanpesan=$this->m_pesanan->cek_urutan_pesanan("pesanan",$tanggalpesan)->num_rows();
+        $id_pesanan=$tanggalpesan.$urutanpesan;
         //bikin id_pesanan simana id_pesana itu dr tanggalpesan+uturan
         //urutan pesanan itu masuk dlm model dimana Select * from pesanan where tanggal_pesan=tgl hr ini di controllernya pk num_rows
         //id_pesanan di ambil untuk bisa ambil detail pesanan
+        
         for($a=1; $a>= $bataslooping ; $a++)
         {
                 $harga=$this->input->post('harga_menu'.$a);
