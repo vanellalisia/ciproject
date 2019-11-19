@@ -32,18 +32,7 @@
 
     <div class="site-wrap">
       
-      <nav class="site-menu">
-        <div class="site-menu-inner">
-          <ul class="list-unstyled">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="menu.html">Our Menu</a></li>
-            <li><a href="blog.html">Our Blog</a></li>
-            <li class="active"><a href="reservation.html">Reserve A Table</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+    <?php include ('headerbar_pelanggan.php')?>
 
       <header class="site-header">
         <div class="row align-items-center">

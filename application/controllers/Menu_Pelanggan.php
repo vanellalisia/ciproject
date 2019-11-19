@@ -20,7 +20,7 @@ class Menu_Pelanggan extends CI_Controller{
         //bikin id_pesanan simana id_pesana itu dr tanggalpesan+uturan
         //urutan pesanan itu masuk dlm model dimana Select * from pesanan where tanggal_pesan=tgl hr ini di controllernya pk num_rows
         //id_pesanan di ambil untuk bisa ambil detail pesanan
-        $data[]=$this->m_pesanan->tambah_pesanan()->result
+        //$data[]=$this->m_pesanan->tambah_pesanan()->result;
         for($a=1; $a>= $bataslooping ; $a++)
         {
                 $harga=$this->input->post('harga_menu'.$a);

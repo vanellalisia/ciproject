@@ -141,11 +141,16 @@
                       </div>
                   </div>
                     </div> <?php } ?><!-- .menu-food-item -->
-                    <select id="waktuambil" name="waktuambil" class="form-control">
-                        <option value="">09.15</option>
-                        <option value="">11.45</option>
-                        <option value="">13.30</option>
+                    <label class="label">Waktu Ambil</label>
+                    
+                      <select id="waktuambil" name="waktuambil" class="form-control">
+                        <option value="">09.15 - Istirahat Pertama</option>
+                        <option value="">11.45 - Istirahat Kedua</option>
+                        <option value="">13.30 s/d 17.00 - Pulang Sekolah</option>
                       </select>
+                      <label class="label">Keterangan Pesanan</label>
+                      <textarea name="keteranganpesanan" id="keteranganpesanan" cols="10" rows="10" class="form-control"></textarea>
+<br>
                     <input type="submit" value="Pesan" class="btn btn-primary">
                   </div>
                 </div>
