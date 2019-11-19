@@ -51,6 +51,7 @@ class Menu_Pelanggan extends CI_Controller{
             'waktu_ambil'=>$waktuambil,
             'total_harga'=>$totalharga
         );
+            $this->m_pesanan->tambah_pesanan('pesanan',$data_pesanan);
             $waktuambil=$this->input-post('waktuambil');
             $data =  $this->m_menu_pelanggan->tampil_pesanan();
             $this->load->view('v_pesan_pilihwaktu',$data);
