@@ -12,7 +12,8 @@ class Menu_Pelanggan extends CI_Controller{
         
     }
     function ambil_pesanan_menu(){
-        $bataslooping = $this->input->post($i);
+        $this->load->model('m_pesanan');
+        $bataslooping = $this->input->post('$i');
         $totalharga=0;
         $tanggalpesan=date("l"."Y,m,d");
         $urutanpesan=$this->m_pesanan->cek_urutan_pesanan("pesanan",$tanggalpesan)->num_rows();
@@ -23,7 +24,7 @@ class Menu_Pelanggan extends CI_Controller{
         //$data[]=$this->m_pesanan->tambah_pesanan()->result;
         
         $waktupesan=date("h:i:s");
-        $tanggalambil=$tanggalpesan->modify('+1 day');
+        $tanggalambil=date("l "."d/m/Y", strtotime("tomorrow"));
         $waktuambil=$this->input->post('waktuambil');
         $keteranganpesan=$this->input->post('keteranganpesanan');
 

@@ -61,7 +61,7 @@
                     <a class="nav-link" id="pills-dinner-tab" data-toggle="pill" href="#pills-dinner" role="tab" aria-controls="pills-dinner" aria-selected="false">Snack</a>
                   </li>
                 </ul>
-                <form method="POST" action="<?php echo base_url().'Menu_Pelanggan/ambil_pesanan_menu' ?>">
+                <form action="<?php echo base_url().'Menu_Pelanggan/ambil_pesanan_menu' ?>"method="POST">
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
                     <?php
@@ -101,9 +101,9 @@
                    foreach($minuman as $list){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <input type="hidden" name="id_menu" value="<?php echo $list->id_menu?>">
-                        <input type="hidden" name="nama_menu" value="<?php echo $list->nama_menu?>">
-                        <input type="hidden" name="harga_menu" value="<?php echo $list->harga_menu?>">
+                        <input type="hidden" name="id_menu<?=$i?>" value="<?php echo $list->id_menu?>">
+                        <input type="hidden" name="nama_menu<?=$i?>" value="<?php echo $list->nama_menu?>">
+                        <input type="hidden" name="harga_menu<?=$i?>" value="<?php echo $list->harga_menu?>">
                         <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
                         <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?> </p>
                       </div>
@@ -111,21 +111,23 @@
                         <strong><?php echo $list->harga_menu ?></strong>
                         <div class="form-field-icon-wrap">
                         <span class="icon ion-android-arrow-dropdown"></span>
-                        <select id="pesanbanyakminuman" name="pesanbanyakminuman<?=$j?>" class="form-control">
-                        <option value="">0</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
+                        <select id="pesanbanyakminuman" name="pesanbanyakminuman<?=$i?>" class="form-control">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
                       </select>
                       </div>
                    </div>
-                    </div> <?php $j++; } ?><!-- .menu-food-item -->
+                    </div> <?php $i++; } ?><!-- .menu-food-item -->
 
                   </div>
                   <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
                   <?php foreach($snack as $list){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        <input type="hidden" name="id_menu[]" value="<?php echo $list->id_menu?>">
+                        <input type="hidden" name="id_menu<?=$i?>" value="<?php echo $list->id_menu?>">
+                        <input type="hidden" name="nama_menu<?=$i?>" value="<?php echo $list->nama_menu?>">
+                        <input type="hidden" name="harga_menu<?=$i?>" value="<?php echo $list->harga_menu?>">
                         <h3><a href="#"><?php echo $list->nama_menu ?></a></h3>
                         <p>Jumlah stok : <?php echo $list->jumlah_stock_menu ?> </p>
                       </div>
@@ -133,20 +135,20 @@
                         <strong><?php echo $list->harga_menu ?></strong>
                         <div class="form-field-icon-wrap">
                         <span class="icon ion-android-arrow-dropdown"></span>
-                        <select id="pesanbanyaksnack" name="pesanbanyaksnack[]" class="form-control">
-                        <option value="">0</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
+                        <select id="pesanbanyaksnack" name="pesanbanyaksnack<?=$i?>" class="form-control">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
                       </select>
                       </div>
                   </div>
-                    </div> <?php } ?><!-- .menu-food-item -->
+                    </div> <?php $i++; } ?><!-- .menu-food-item -->
                     <label class="label">Waktu Ambil</label>
                     
                       <select id="waktuambil" name="waktuambil" class="form-control">
-                        <option value="">09.15 s/d 09.30 - Istirahat Pertama</option>
-                        <option value="">11.45 s/d 12.00 - Istirahat Kedua</option>
-                        <option value="">13.30 s/d 17.00 - Pulang Sekolah</option>
+                        <option value="09.15">09.15 s/d 09.30 - Istirahat Pertama</option>
+                        <option value="11.45">11.45 s/d 12.00 - Istirahat Kedua</option>
+                        <option value="13.30">13.30 s/d 17.00 - Pulang Sekolah</option>
                       </select>
                       <label class="label">Keterangan Pesanan</label>
                       <textarea name="keteranganpesanan" id="keteranganpesanan" cols="10" rows="10" class="form-control"></textarea>
