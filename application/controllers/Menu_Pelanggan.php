@@ -36,6 +36,9 @@ class Menu_Pelanggan extends CI_Controller{
                 $totalharga=$totalharga+$harga*$pesanan.$a;
                 $data = array (
                     'id_menu' => $this->input->post('id_menu'.$a)
+                    'id_pesanan' => $id_pesanan,
+                    'jumlah_pesanan' => $pesanan.$a,
+                    'keterangan_pesanan' => $keteranganpesan
                 );
                 if(($pesanan.$a) != '0'){
                 $this->m_pesanan->tambah_detail_pesanan($pesanan,'detail_pesanan',$data);
