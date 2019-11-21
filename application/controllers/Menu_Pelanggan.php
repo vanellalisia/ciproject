@@ -27,21 +27,22 @@ class Menu_Pelanggan extends CI_Controller{
         $tanggalambil=date("l "."d/m/Y", strtotime("tomorrow"));
         $waktuambil=$this->input->post('waktuambil');
         $keteranganpesan=$this->input->post('keteranganpesanan');
-
+        $pesanan=0;
        
         for($a=1; $a>= $bataslooping ; $a++)
         {
                 $harga=$this->input->post('harga_menu'.$a);
-                $pesanan.$a =$this->input->post('pesanbanyakmakanan'.$a); 
-                $totalharga=$totalharga+$harga*$pesanan.$a;
+                $pesanan.$a =$this->input->post('pesanbanyakmakanan'.$a);
+                $pesananberurut= $pesanan.$a; 
+                $totalharga=$totalharga+$harga*$pesananberurut;
                 $data = array (
-                    'id_menu' => $this->input->post('id_menu'.$a)
+                    'id_menu' => $this->input->post('id_menu'.$a),
                     'id_pesanan' => $id_pesanan,
-                    'jumlah_pesanan' => $pesanan.$a,
+                    'jumlah_pesanan' => $pesananberurut,
                     'keterangan_pesanan' => $keteranganpesan
                 );
                 if(($pesanan.$a) != '0'){
-                $this->m_pesanan->tambah_detail_pesanan($pesanan,'detail_pesanan',$data);
+                $this->m_pesanan->tambah_detail_pesanan('detail_pesanan',$data);
 
                 //insert data ke tabel pesanan
 
