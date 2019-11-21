@@ -10,4 +10,3 @@ class m_pesanan extends CI_Model{
         return $this->db->insert($table, $data);
     }
 }
-?>

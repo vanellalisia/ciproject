@@ -146,9 +146,9 @@
                     <label class="label">Waktu Ambil</label>
                     
                       <select id="waktuambil" name="waktuambil" class="form-control">
-                        <option value="09.15">09.15 s/d 09.30 - Istirahat Pertama</option>
-                        <option value="11.45">11.45 s/d 12.00 - Istirahat Kedua</option>
-                        <option value="13.30">13.30 s/d 17.00 - Pulang Sekolah</option>
+                        <option value="09:15">09.15 s/d 09.30 - Istirahat Pertama</option>
+                        <option value="11:45">11.45 s/d 12.00 - Istirahat Kedua</option>
+                        <option value="13:30">13.30 s/d 17.00 - Pulang Sekolah</option>
                       </select>
                       <label class="label">Keterangan Pesanan</label>
                       <textarea name="keteranganpesanan" id="keteranganpesanan" cols="10" rows="10" class="form-control"></textarea>

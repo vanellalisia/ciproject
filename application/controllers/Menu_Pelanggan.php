@@ -15,7 +15,7 @@ class Menu_Pelanggan extends CI_Controller{
         $this->load->model('m_pesanan');
         $bataslooping = $this->input->post('$i');
         $totalharga=0;
-        $tanggalpesan=date("l"."Y,m,d");
+        $tanggalpesan=date("Ymd");
         $urutanpesan=$this->m_pesanan->cek_urutan_pesanan("pesanan",$tanggalpesan)->num_rows();
         $id_pesanan=$tanggalpesan.$urutanpesan;
         //bikin id_pesanan simana id_pesana itu dr tanggalpesan+uturan
@@ -24,12 +24,12 @@ class Menu_Pelanggan extends CI_Controller{
         //$data[]=$this->m_pesanan->tambah_pesanan()->result;
         
         $waktupesan=date("h:i:s");
-        $tanggalambil=date("l "."d/m/Y", strtotime("tomorrow"));
+        $tanggalambil=date("ymd", strtotime("tomorrow"));
         $waktuambil=$this->input->post('waktuambil');
         $keteranganpesan=$this->input->post('keteranganpesanan');
         $pesanan=0;
        
-        for($a=1; $a>= $bataslooping ; $a++)
+        for($a=1; $a<= $bataslooping ; $a++)
         {
                 $harga=$this->input->post('harga_menu'.$a);
                 $pesanan.$a =$this->input->post('pesanbanyakmakanan'.$a);
@@ -41,7 +41,7 @@ class Menu_Pelanggan extends CI_Controller{
                     'jumlah_pesanan' => $pesananberurut,
                     'keterangan_pesanan' => $keteranganpesan
                 );
-                if(($pesanan.$a) != '0'){
+                if(($pesananberurut) != '0'){
                 $this->m_pesanan->tambah_detail_pesanan('detail_pesanan',$data);
 
                 //insert data ke tabel pesanan
@@ -50,6 +50,7 @@ class Menu_Pelanggan extends CI_Controller{
         }//total harga sudah daoat baru masukin ke tabel pesanan
         $data_pesanan=array(
             'id_pesanan'=>$id_pesanan,
+            
             'tanggal_pesan'=>$tanggalpesan,
             'tanggal_ambil'=>$tanggalambil,
             'waktu_pesan'=>$waktupesan,
@@ -57,8 +58,8 @@ class Menu_Pelanggan extends CI_Controller{
             'total_harga'=>$totalharga
         );
             $this->m_pesanan->tambah_pesanan('pesanan',$data_pesanan);
-            $waktuambil=$this->input-post('waktuambil');
-            $data =  $this->m_menu_pelanggan->tampil_pesanan();
+            //$waktuambil=$this->input-post('waktuambil');
+            //$data =  $this->m_menu_pelanggan->tampil_pesanan();
             $this->load->view('v_pesan_pilihwaktu',$data);
     }
    
