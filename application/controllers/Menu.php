@@ -74,10 +74,10 @@ class Menu extends CI_Controller {
 	}
 	
 	function getMenuByAjax(){
-		$id = $this->input->post('id_menu');
-		$where = array('id_menu'=>$id);
-		$data = $this->m_menu->get_menu_by_ajax($where);
+		$jenis = $this->input->post('jenis');
+		$data = $this->m_menu->get_menu_by_ajax($jenis);
 		echo json_encode($data);
+		
 	}
 	
 	
