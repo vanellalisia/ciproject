@@ -95,7 +95,7 @@ $(document).ready(function() {
 
         <div class="content mt-3">
             <div class="animated fadeIn">
-
+  
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
