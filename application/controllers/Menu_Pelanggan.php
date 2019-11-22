@@ -34,12 +34,9 @@ class Menu_Pelanggan extends CI_Controller{
 
                 error_log("looping ke  = ". $a. " harga = ".$harga);
                 error_log("looping ke  = ". $a. " pesanan = ".$pesanan);
-              //  $pesananberurut = "8888";
-              //$pesananberurut= $pesanan.$a; 
-               $totalharga=$totalharga+$harga*$pesanan;
-               //$id_menu = $this->input->post('id_menu'.$a);
-
               
+               $totalharga=$totalharga+$harga*$pesanan;
+               
                 $data = array (
                     'id_menu' => $id_menu,
                     'id_pesanan' => $id_pesanan,
@@ -49,10 +46,10 @@ class Menu_Pelanggan extends CI_Controller{
                 if($pesanan != '0'){
                 $this->m_pesanan->tambah_detail_pesanan('detail_pesanan',$data);
 
-                //insert data ke tabel pesanan
+               
 
                 }
-        }//total harga sudah daoat baru masukin ke tabel pesanan
+        }
         $data_pesanan=array(
             'id_pesanan'=>$id_pesanan,
             'tanggal_pesan'=>$tanggalpesan,
