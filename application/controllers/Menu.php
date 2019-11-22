@@ -18,7 +18,7 @@ class Menu extends CI_Controller {
 	}
 	
 	function insertData(){
-		$id = $this->input->post('id');
+		$id = $this->input->post('id_menu');
 		$nama = $this->input->post('nama');
 		$jenis = $this->input->post('jenis');
 		$stok = $this->input->post('stok');
