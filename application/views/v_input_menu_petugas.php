@@ -103,14 +103,16 @@ $(document).ready(function() {
                                         <select name="jenis" id="select" class="form-control">
                                             <option value="MK">Makanan</option>
                                             <option value="MN">Minuman</option>
-                                            <option value="SK">Snack</option>
-                                                                        
+                                            <option value="SK">Snack</option>                       
                                         </select>
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="text-input" class=" form-control-label">ID Menu</label></div>
-                                    <div class="col-12 col-md-9"><input type="varchar" id="text-input" name="id" placeholder="" class="form-control" readonly value=""></div>
+                                    <div class="col-12 col-md-9"><input type="varchar" id="idmenu" name="id" placeholder="" class="form-control" value="
+	
+										
+									"></div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Menu</label></div>
@@ -186,6 +188,8 @@ $(document).ready(function() {
             });
         })(jQuery);
     </script>
+	
+	
 
 </body>
 
