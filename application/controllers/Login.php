@@ -26,7 +26,8 @@ class Login extends CI_Controller{
 			$data_session = array(
 				'email_pengguna' => $email,
 				'kata_sandi' =>$password,
-				'status' => "login"
+				'login' => TRUE
+
 				
 				);
 			$this->session->set_userdata($data_session);

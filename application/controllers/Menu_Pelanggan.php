@@ -14,10 +14,12 @@ class Menu_Pelanggan extends CI_Controller{
     function ambil_pesanan_menu(){
         $this->load->model('m_pesanan');
         $bataslooping = $this->input->post('$i');
-        $totalharga=0;
+        
         $tanggalpesan=date("Ymd");
-        $urutanpesan=$this->m_pesanan->cek_urutan_pesanan("pesanan",$tanggalpesan)->num_rows();
-        $id_pesanan=$tanggalpesan.$urutanpesan;
+        $urutanpesan=$this->m_pesanan->cek_urutan_pesanan("pesanan",$tanggalpesan)->num_rows();//ini knp selalu 0
+        $urutanidpesan=$urutanpesan+1;
+        //echo $urutanpesan;
+        $id_pesanan=$tanggalpesan.$urutanidpesan;
         //bikin id_pesanan simana id_pesana itu dr tanggalpesan+uturan
         //urutan pesanan itu masuk dlm model dimana Select * from pesanan where tanggal_pesan=tgl hr ini di controllernya pk num_rows
         //id_pesanan di ambil untuk bisa ambil detail pesanan
@@ -28,9 +30,9 @@ class Menu_Pelanggan extends CI_Controller{
         $waktuambil=$this->input->post('waktuambil');
         $keteranganpesan=$this->input->post('keteranganpesanan');
         $pesanan=0;
-       
-        for($a=1; $a<= $bataslooping ; $a++)
-        {
+        $totalharga=0; 
+        for($a=1 ;$a<= $bataslooping ; $a++)
+        { 
                 $harga=$this->input->post('harga_menu'.$a);
                 $pesanan.$a =$this->input->post('pesanbanyakmakanan'.$a);
                 $pesananberurut= $pesanan.$a; 
@@ -50,7 +52,6 @@ class Menu_Pelanggan extends CI_Controller{
         }//total harga sudah daoat baru masukin ke tabel pesanan
         $data_pesanan=array(
             'id_pesanan'=>$id_pesanan,
-            
             'tanggal_pesan'=>$tanggalpesan,
             'tanggal_ambil'=>$tanggalambil,
             'waktu_pesan'=>$waktupesan,

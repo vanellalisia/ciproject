@@ -3,8 +3,14 @@
       <nav class="site-menu">
         <div class="site-menu-inner">
           <ul class="list-unstyled">
+          
+            <li><?php 
+            if($this->session->userdata('login')){?><a href="<?php echo base_url('Dashboard/dashboard_pelanggan')?>">
+             <?php echo $this->session->userdata("email_pengguna");
+
+            }
+            ?></a></li>
             <li class="active"><a href="<?php echo base_url('Dashboard/dashboard_pelanggan') ?>">Halaman Utama</a></li>
-            
             <li><a href="<?php echo base_url('Menu_Pelanggan') ?>">Menu</a></li>
             <li><a href="<?php echo base_url('Pesanan_Pelanggan') ?>">Pesanan Anda</a></li>
             <li><a href="reservation.html">Transaksi Anda</a></li>
