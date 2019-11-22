@@ -13,37 +13,40 @@ class Menu_Pelanggan extends CI_Controller{
     }
     function ambil_pesanan_menu(){
         $this->load->model('m_pesanan');
-        $bataslooping = $this->input->post('$i');
+        $bataslooping = $this->input->post('i');
         
         $tanggalpesan=date("Ymd");
         $urutanpesan=$this->m_pesanan->cek_urutan_pesanan("pesanan",$tanggalpesan)->num_rows();//ini knp selalu 0
         $urutanidpesan=$urutanpesan+1;
-        //echo $urutanpesan;
         $id_pesanan=$tanggalpesan.$urutanidpesan;
-        //bikin id_pesanan simana id_pesana itu dr tanggalpesan+uturan
-        //urutan pesanan itu masuk dlm model dimana Select * from pesanan where tanggal_pesan=tgl hr ini di controllernya pk num_rows
-        //id_pesanan di ambil untuk bisa ambil detail pesanan
-        //$data[]=$this->m_pesanan->tambah_pesanan()->result;
-        
         $waktupesan=date("h:i:s");
         $tanggalambil=date("ymd", strtotime("tomorrow"));
         $waktuambil=$this->input->post('waktuambil');
         $keteranganpesan=$this->input->post('keteranganpesanan');
-        $pesanan=0;
+       // $pesanan=0;
         $totalharga=0; 
-        for($a=1 ;$a<= $bataslooping ; $a++)
+
+        for($a=0 ;$a< $bataslooping ; $a++)
         { 
                 $harga=$this->input->post('harga_menu'.$a);
-                $pesanan.$a =$this->input->post('pesanbanyakmakanan'.$a);
-                $pesananberurut= $pesanan.$a; 
-                $totalharga=$totalharga+$harga*$pesananberurut;
+                $pesanan =$this->input->post('pesanbanyakmakanan'.$a);
+                $id_menu =$this->input->post('id_menu'.$a);
+
+                error_log("looping ke  = ". $a. " harga = ".$harga);
+                error_log("looping ke  = ". $a. " pesanan = ".$pesanan);
+              //  $pesananberurut = "8888";
+              //$pesananberurut= $pesanan.$a; 
+               // $totalharga=$totalharga+$harga*$pesananberurut;
+               //$id_menu = $this->input->post('id_menu'.$a);
+
+               $totalharga="9999";
                 $data = array (
-                    'id_menu' => $this->input->post('id_menu'.$a),
+                    'id_menu' => $id_menu,
                     'id_pesanan' => $id_pesanan,
-                    'jumlah_pesanan' => $pesananberurut,
+                    'jumlah_pesanan' => $pesanan,
                     'keterangan_pesanan' => $keteranganpesan
                 );
-                if(($pesananberurut) != '0'){
+                if($pesanan != '0'){
                 $this->m_pesanan->tambah_detail_pesanan('detail_pesanan',$data);
 
                 //insert data ke tabel pesanan
