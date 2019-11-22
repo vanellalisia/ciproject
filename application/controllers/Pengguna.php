@@ -26,7 +26,7 @@ class Pengguna extends CI_Controller {
 		$tanggal = $this->input->post('tanggal');
 
 		$urutanpengguna=$this->m_pengguna->cekJumlah('detail_pengguna',$jabatan)->num_rows();
-		$db
+		
 		$data = array(
 			'id_pengguna'		=>	$id,
 			'nama_pengguna'		=>	$nama,
