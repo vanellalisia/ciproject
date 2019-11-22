@@ -101,7 +101,7 @@ $(document).ready(function() {
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="select" class=" form-control-label">Jenis Menu</label></div>
                                     <div class="col-12 col-md-9">
-                                        <select name="jenis" id="select" class="form-control">
+                                        <select name="jenis" id="jenis" class="form-control">
                                             <option value="MK">Makanan</option>
                                             <option value="MN">Minuman</option>
                                             <option value="SK">Snack</option>
