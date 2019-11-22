@@ -3,10 +3,8 @@ class Pengguna extends CI_Controller {
     function __construct(){
 		parent::__construct();
 		$this->load->model('m_pengguna');
-		/**if($this->session->userdata('status') != "login"){
-			redirect('Login');
-	}**/
-}
+	}
+	
     function index(){
         $data['pengguna']=$this->m_pengguna->tampil_pengguna()->result(); //panggil function nya
         $this->load->view('v_pengguna', $data);
@@ -17,7 +15,7 @@ class Pengguna extends CI_Controller {
 	}
 	
 	function insertData(){
-		$id = $this->input->post('id');
+		$id = $this->input->post('id_pengguna');
 		$nama = $this->input->post('nama');
 		$jabatan = $this->input->post('jabatan');
 		$email = $this->input->post('email');
@@ -100,10 +98,10 @@ class Pengguna extends CI_Controller {
 	}
 	
 	function getPenggunaByAjax(){
-		$id = $this->input->post('id_pengguna');
-		$where = array('id_pengguna'=>$id);
-		$data = $this->m_pengguna->get_pengguna_by_ajax($where);
+		$jabatan = $this->input->post('jabatan');
+		$data = $this->m_pengguna->get_pengguna_by_ajax($jabatan);
 		echo json_encode($data);
+		
 	}
 	
 	
