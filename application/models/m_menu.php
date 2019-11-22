@@ -26,19 +26,16 @@ class m_menu extends CI_Model{
 	}
 	
 	function get_menu_by_ajax($where){
-		$query = $this->db->get_where('menu',$where);
-		if($query->num_rows()>0){
-			foreach($query->result() as $data){
-				$output=array(
-					'id_menu' => $data->id_menu);
-			}
-		}
-		return $output;
 		
-		
-		
-		
-		
+		$query 		= $this->db->query("SELECT *  FROM menu WHErE LEFT(id_menu, 2)  = '$where'");
+		$data  	= $query->num_rows() + 1;
+		$output=array(
+
+					'id_menu' 	=> $where . sprintf("%03d", $data) );
+				
+
+    return $output;
+	
 		
 	}
 	
