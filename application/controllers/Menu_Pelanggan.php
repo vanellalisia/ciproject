@@ -36,10 +36,10 @@ class Menu_Pelanggan extends CI_Controller{
                 error_log("looping ke  = ". $a. " pesanan = ".$pesanan);
               //  $pesananberurut = "8888";
               //$pesananberurut= $pesanan.$a; 
-               // $totalharga=$totalharga+$harga*$pesananberurut;
+               $totalharga=$totalharga+$harga*$pesanan;
                //$id_menu = $this->input->post('id_menu'.$a);
 
-               $totalharga="9999";
+              
                 $data = array (
                     'id_menu' => $id_menu,
                     'id_pesanan' => $id_pesanan,

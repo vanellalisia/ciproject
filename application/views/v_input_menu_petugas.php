@@ -97,6 +97,7 @@ $(document).ready(function() {
                         </div>
                         <div class="card-body card-block">
                             <form action="<?php echo 'insertData' ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                            
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="select" class=" form-control-label">Jenis Menu</label></div>
                                     <div class="col-12 col-md-9">
@@ -104,13 +105,20 @@ $(document).ready(function() {
                                             <option value="MK">Makanan</option>
                                             <option value="MN">Minuman</option>
                                             <option value="SK">Snack</option>
-                                                                        
+                                            <script>
+                                            $("#select").change(function(){
+                                              //  $menu = $(this).val();
+                                                //$menu="a";
+                                                $("#id").value('apa');
+                                            });
+                                            </script>               
                                         </select>
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="text-input" class=" form-control-label">ID Menu</label></div>
-                                    <div class="col-12 col-md-9"><input type="varchar" id="text-input" name="id" placeholder="" class="form-control" readonly value=""></div>
+                                    <div class="col-12 col-md-9"><input type="varchar" id="id" name="id" placeholder="" class="form-control"  
+                                    value=""></div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Menu</label></div>

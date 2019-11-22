@@ -5,7 +5,7 @@ class m_pengguna extends CI_Model{
 	}
 	
 	function cekJumlah($table, $jabatan){
-		$hitungpengguna= $this->db->query('SELECT * FROM pengguna WHERE jabatan=$jabatan')->num_rows();
+		$hitungpengguna= $this->db->query('SELECT * FROM pengguna WHERE jabatan=$jabatan');
 		return $hitungpengguna;
 	}
 	

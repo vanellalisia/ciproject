@@ -26,15 +26,17 @@ class Pengguna extends CI_Controller {
 		$alamat = $this->input->post('alamat');
 		$status = $this->input->post('status');
 		$tanggal = $this->input->post('tanggal');
-		
+
+		$urutanpengguna=$this->m_pengguna->cekJumlah('detail_pengguna',$jabatan)->num_rows();
+		$db
 		$data = array(
 			'id_pengguna'		=>	$id,
 			'nama_pengguna'		=>	$nama,
 			'email_pengguna'	=>	$email,
 			'kata_sandi'		=>	$sandi,
 			'nomor_telepon'		=>	$telp,
-			'alamat_pengguna'		=>	$alamat,
-			'status_pengguna'		=>	$status,
+			'alamat_pengguna'	=>	$alamat,
+			'status_pengguna'	=>	$status,
 			'tanggal_masuk'		=>	$tanggal
 			);
 		$data2 = array(

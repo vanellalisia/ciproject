@@ -10,6 +10,10 @@ class Menu extends CI_Controller {
     }
 	
 	function tambahData(){
+
+		$jenis_makanan=$this->m_menu->cek_urutan_menu('menu',"id_jenis_menu='MK'")->num_rows();
+		$jenis_minuman=$this->m_menu->cek_urutan_menu('menu',"id_jenis_menu='MN'")->num_rows();
+		$jenis_snack=$this->m_menu->cek_urutan_menu('menu',"id_jenis_menu='SK'")->num_rows();
 		$this->load->view('v_input_menu_petugas');
 	}
 	
@@ -19,6 +23,7 @@ class Menu extends CI_Controller {
 		$jenis = $this->input->post('jenis');
 		$stok = $this->input->post('stok');
 		$harga = $this->input->post('harga');
+		
 		
 		$data = array(
 			'id_menu'		=>	$id,
