@@ -9,6 +9,11 @@ class Signin extends CI_Controller{
 		$this->load->view('v_signin');
     }
     
+	function insertData(){
+		
+		
+		
+	}
 	
 	
 	
