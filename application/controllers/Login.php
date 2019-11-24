@@ -11,10 +11,11 @@ class Login extends CI_Controller{
     function aksi_login(){
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
-		
+		$id_pengguna=$this->input->post('id_pengguna');
 		$where = array(
 			'email_pengguna' => $email,
 			'kata_sandi' => $password,
+			'id_pengguna'=>$id_pengguna
 			//'id_jabatan'=>$jabatan
 			);
 
@@ -26,6 +27,7 @@ class Login extends CI_Controller{
 			$data_session = array(
 				'email_pengguna' => $email,
 				'kata_sandi' =>$password,
+				'id_pengguna'=>$id_pengguna,
 				'login' => TRUE
 
 				
