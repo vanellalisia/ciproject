@@ -8,7 +8,7 @@ class Menu extends CI_Controller {
         $data['menu']=$this->m_menu->tampil_menu_petugas()->result(); //panggil function nya
         $this->load->view('v_menu_petugas', $data);
     }
-	
+	 
 	function tambahData(){
 
 		$jenis_makanan=$this->m_menu->cek_urutan_menu('menu',"id_jenis_menu='MK'")->num_rows();

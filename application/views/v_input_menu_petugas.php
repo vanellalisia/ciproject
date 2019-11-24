@@ -103,7 +103,7 @@ $(document).ready(function() {
                         </div>
                         <div class="card-body card-block">
                             <form action="<?php echo 'insertData' ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
-                            
+                             
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="select" class=" form-control-label">Jenis Menu</label></div>
                                     <div class="col-12 col-md-9">

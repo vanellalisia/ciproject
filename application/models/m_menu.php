@@ -18,7 +18,7 @@ class m_menu extends CI_Model{
 	function updateRecord($where,$data,$table){
 		$this->db->where($where);
 		$this->db->update($table,$data);
-	}
+	} 
 	
 	function hapusRecord($where,$table){
 		$this->db->where($where);
