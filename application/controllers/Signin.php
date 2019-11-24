@@ -10,7 +10,27 @@ class Signin extends CI_Controller{
     }
     
 	function insertData(){
+		$name = $this->input->post('nama');
+		$email = $this->input->post('email');
+		$password = $this->input->post('sandi');
+		$jabatan = "PL";
+
+		$urutanpengguna=$this->m_pengguna->cekJumlah('detail_pengguna',$jabatan)->num_rows();
 		
+		$data = array(
+			'id_pengguna'		=>	$id,
+			'nama_pengguna'		=>	$nama,
+			'email_pengguna'	=>	$email,
+			'kata_sandi'		=>	$sandi
+			);
+		$data2 = array(
+			'id_pengguna'		=>	$id,
+			'id_jabatan'		=>	$jabatan
+			);	
+		
+		$this->m_signin->insertTable('pengguna' ,$data);
+		$this->m_signin->insertTable('detail_pengguna' ,$data2);
+		redirect('Pengguna');
 		
 		
 	}
