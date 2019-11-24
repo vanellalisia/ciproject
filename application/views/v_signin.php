@@ -68,9 +68,7 @@
                                             <button type="button" class="btn social twitter btn-flat btn-addon mt-2"><i class="ti-twitter"></i>Register with twitter</button>
                                         </div>
                                     </div>
-                                    <div class="register-link m-t-15 text-center">
-                                        <p>Already have account ? <a href="#"> Sign in</a></p>
-                                    </div>
+                                    <
                     </form>
                 </div>
             </div>
