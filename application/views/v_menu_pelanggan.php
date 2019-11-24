@@ -106,6 +106,7 @@
                    foreach($minuman as $list){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
+                        
                         <input type="hidden" name="id_menu<?=$total1?>" value="<?php echo $list->id_menu?>">
                         <input type="hidden" name="nama_menu<?=$total1?>" value="<?php echo $list->nama_menu?>">
                         <input type="hidden" name="harga_menu<?=$total1?>" value="<?php echo $list->harga_menu?>">
@@ -133,6 +134,7 @@
                   foreach($snack as $list){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
+                        
                         <input type="hidden" name="id_menu<?=$total2?>" value="<?php echo $list->id_menu?>">
                         <input type="hidden" name="nama_menu<?=$total2?>" value="<?php echo $list->nama_menu?>">
                         <input type="hidden" name="harga_menu<?=$total2?>" value="<?php echo $list->harga_menu?>">
