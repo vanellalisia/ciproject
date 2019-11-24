@@ -48,6 +48,7 @@
 
                     <form action="<?php echo 'Login/aksi_login';?> " method="POST">
                         <div class="form-group">
+                        <input type="hidden" name="id_pengguna">
                             <label>Email address</label>
                                 <input type="email" name="email" class="form-control" placeholder="Email">
                         </div>

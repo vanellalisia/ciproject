@@ -1,7 +1,7 @@
 <?php 
 class m_login extends CI_Model{	
 	function cek_login($table,$where){
-		$query=$this->db->query('SELECT pengguna.email_pengguna, pengguna.nama_pengguna, pengguna.kata_sandi, detail_pengguna.id_jabatan FROM
+		$query=$this->db->query('SELECT pengguna.email_pengguna, pengguna.id_pengguna, pengguna.kata_sandi, detail_pengguna.id_jabatan FROM
 		pengguna JOIN detail_pengguna ON pengguna.id_pengguna=detail_pengguna.id_pengguna');
 		return $query;
 		
