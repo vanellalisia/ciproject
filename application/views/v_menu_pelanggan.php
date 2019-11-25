@@ -47,7 +47,8 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-md-8" data-aos="fade-up">
-
+<?php  if($this->session->userdata('login')){?>
+   
                 <h2 class="mb-5 text-center">Daftar Menu</h2>
                 <p align="center"> untuk <?php echo date("l "."d/m/Y", strtotime("tomorrow")); ?></p>
                 <ul class="nav site-tab-nav" id="pills-tab" role="tablist">
@@ -176,7 +177,8 @@
           </div>
         </div> <!-- .section -->
                   </form>
-          
+
+                  <?php } ?>          
         </div> <!-- .section -->
 
   

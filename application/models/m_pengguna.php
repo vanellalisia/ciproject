@@ -40,6 +40,9 @@ class m_pengguna extends CI_Model{
 	
 		
 	}
+	function ambilidpengguna($table, $data){
+		return $this->db->get_where($table, $data);
+	}
 	
 	
 }

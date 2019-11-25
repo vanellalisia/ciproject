@@ -14,7 +14,7 @@ class Menu_Pelanggan extends CI_Controller{
     function ambil_pesanan_menu(){
         $this->load->model('m_pesanan');
         $bataslooping = $this->input->post('i');
-        
+        $id_pengguna=$this->session->userdata('id_pengguna');
         $tanggalpesan=date("Ymd");
         $urutanpesan=$this->m_pesanan->cek_urutan_pesanan("pesanan",$tanggalpesan)->num_rows();//ini knp selalu 0
         $urutanidpesan=$urutanpesan+1;
@@ -59,9 +59,18 @@ class Menu_Pelanggan extends CI_Controller{
             'waktu_ambil'=>$waktuambil,
             'total_harga'=>$totalharga
         );
+        $data_tampil_pesanan_yangbarudipesan=array(
+            'id_menu' => $id_menu,
+            'id_pesanan' => $id_pesanan,
+            'jumlah_pesanan' => $pesanan,
+            'keterangan_pesanan' => $keteranganpesan,
+            'total_harga'=>$totalharga,
+            'tanggal_ambil'=>$tanggalambil,
+            'waktu_ambil'=>$waktuambil
+        );
             $this->m_pesanan->tambah_pesanan('pesanan',$data_pesanan);
             
-            $this->load->view('v_pesan_pilihwaktu',$data);
+            $this->load->view('v_index_pelanggan');
     }
    
 }

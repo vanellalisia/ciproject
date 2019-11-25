@@ -9,14 +9,14 @@ class Login extends CI_Controller{
 		$this->load->view('v_login');
     }
     function aksi_login(){
+		$this->load->model('m_pengguna');
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
 		$id_pengguna=$this->input->post('id_pengguna');
 		$where = array(
 			'email_pengguna' => $email,
-			'kata_sandi' => $password,
-			'id_pengguna'=>$id_pengguna
-			//'id_jabatan'=>$jabatan
+			'kata_sandi' => $password
+			
 			);
 
 			
@@ -24,6 +24,8 @@ class Login extends CI_Controller{
 
 		if($cek > 0){
 			$jabatan['ini'] = $this->m_login->cek_pengguna("pengguna", $email, $password)->result_array(); //masuki ke dlm array makanya ga perlu pk foreach
+			$id_pengguna_arr= $this->m_pengguna->ambilidpengguna("pengguna", $where)->row_array();
+			$id_pengguna=$id_pengguna_arr['id_pengguna'];
 			$data_session = array(
 				'email_pengguna' => $email,
 				'kata_sandi' =>$password,
