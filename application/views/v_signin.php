@@ -46,7 +46,7 @@
                     <form action="<?php echo 'insertData' ?>" method="POST">
                         <div class="form-group">
                             <label>User Name</label>
-                            <input type="email" class="form-control" placeholder="User Name" name="name">
+                            <input type="text" class="form-control" placeholder="User Name" name="name">
                         </div>
                             <div class="form-group">
                                 <label>Email address</label>
