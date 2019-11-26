@@ -23,7 +23,7 @@ class Menu_Pelanggan extends CI_Controller{
         $tanggalambil=date("ymd", strtotime("tomorrow"));
         $waktuambil=$this->input->post('waktuambil');
         $keteranganpesan=$this->input->post('keteranganpesanan');
-        $nama_menu=$this->input>post('nama_menu');
+        //nama_menu=$this->input>post('nama_menu');
         $totalharga=0; 
 
         for($a=0 ;$a< $bataslooping ; $a++)
@@ -69,7 +69,7 @@ class Menu_Pelanggan extends CI_Controller{
         
 
             $this->m_pesanan->tambah_pesanan('pesanan',$data_pesanan);
-            
+            $this->m_pesanan->update_stok_menu('menu', $id_menu, $pesanan);
             $this->load->view('v_detail_pesanan_pelanggan', $data_tampil_pesanan_yangbarudipesan);
     }
     

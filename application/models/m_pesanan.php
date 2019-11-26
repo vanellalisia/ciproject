@@ -9,4 +9,7 @@ class m_pesanan extends CI_Model{
     function tambah_detail_pesanan($table, $data){
         return $this->db->insert($table, $data);
     }
+    function update_stok_menu($table, $id_menu, $pesanan){
+        $this->query->db("UPDATE menu SET jumlah_stock_menu=jumlah_stock_menu-'$pesanan' WHERE id_menu='$id_menu'");
+    }
 }
