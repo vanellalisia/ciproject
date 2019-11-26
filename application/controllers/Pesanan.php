@@ -10,6 +10,13 @@ class Pesanan extends CI_Controller {
         $this->load->view('v_pesanan', $data);
     }
 	
+	function editData($id_pesanan){
+		
+		
+		
+		
+	}
+	
 	
 	
 	

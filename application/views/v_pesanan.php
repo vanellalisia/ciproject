@@ -51,7 +51,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Daftar Pengguna</h1>
+                        <h1>Daftar Pesanan</h1>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,6 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li class="active"><a href="<?php echo 'Pengguna/tambahData' ?>">+ Tambah Pengguna</a></li>
                         </ol>
                     </div>
                 </div>
@@ -74,36 +73,29 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
+                                            <th scope="col">Id Pesanan</th>
                                             <th scope="col">Id Pengguna</th>
-                                            <th scope="col">Nama Pengguna</th>
-											<th scope="col">Jabatan</th>
-                                            <th scope="col">Email</th>
-											<th scope="col">Kata Sandi</th>
-                                            <th scope="col">No. Telp</th>
-											<th scope="col">Alamat</th>
-											<th scope="col">Status</th>
-											<th scope="col">Tanggal Masuk</th>
+											<th scope="col">Total Harga</th>
+                                            <th scope="col">Status Pesanan</th>
+											<th scope="col">Pesan Detail</th>
 											<th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 									<?php
 									$i=0;
-									foreach($pengguna as $list){ ?>
+									foreach($pesanan as $list){ ?>
 									
                                         <tr>
-                                            <td><?php echo $list->id_pengguna ?></td>
-                                            <td><?php echo $list->nama_pengguna ?></td>
-                                            <td><?php echo $list->nama_jabatan ?></td>
-                                            <td><?php echo $list->email_pengguna ?></td>
-											<td><?php echo $list->kata_sandi ?></td>
-											<td><?php echo $list->nomor_telepon ?></td>
-											<td><?php echo $list->alamat_pengguna ?></td>
-											<td><?php echo $list->status_pengguna ?></td>
-											<td><?php echo $list->tanggal_masuk ?></td>
+                                            <td><?php echo $list->id_pesanan ?></td>
+                                            <td></td>
+											<td><?php echo $list->total_harga ?></td>
+											<td><?php echo $list->status_pesanan ?></td>
 											<td>
-											<a href="<?php echo base_url(). 'Pengguna/editData/'.$list->id_pengguna;?>"><i class="fa fa-edit"></i>Edit</a>
-											<a href="<?php echo base_url(). 'Pengguna/hapusData/'.$list->id_pengguna;?>"><i class="fa fa-trash-o"></i>Hapus</a>
+											<button data-toggle="modal" data-target="#myModal">Detail</button>
+											</td>
+											<td>
+											<a href="<?php echo base_url(). 'Pesanan/editData/'.$list->id_pesanan;?>"><i class="fa fa-edit"></i>Edit Status</a>
 											</td>
                                         </tr>
                                         <?php
@@ -154,6 +146,32 @@
             });
         })(jQuery);
     </script>
+	
+	
+	<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+		  <h4 class="modal-title">Detail Pesanan</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+          <p>Menu</p>
+		  <p>Tanggal Ambil <?php    ?></p>
+		  <p>Keterangan <?php  ?></p>
+		  
+		  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
 </body>
 
