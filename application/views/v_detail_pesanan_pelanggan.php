@@ -53,15 +53,20 @@
             <div class="row justify-content-center mb-5">
               <div class="col-md-8  text-center">
               <h2 class="mb-3">Detail Pesanan</h2>
-              <?php foreach($pesanan_detail as $list){
+              <?php
+              $i=0;
+              foreach($pesanan_detail as $list){
                 ?>
                 
                 <p class="lead">
-                    <?php 
-                        //echo $list['id_pesanan'];
-                    }
-                    ?>
+                    ID_Pesanan: <?php echo ($list['id_pesanan']);?><br>
+                    
+                    Daftar Makanan: <?php echo ($list['jumlah_pesanan']);?> <?php echo ($list['id_menu']);?><br>
+                    Total Harga : <?php echo ($list['total_harga']);?><br>
+                    Tanggal/Waktu Ambil: <?php echo ($list['tanggal_ambil']);?> / <?php echo ($list['waktu_ambil']);?><br>
+                    Keterangan: <?php echo ($list['keterangan_pesanan']);?>
                 </p>
+              <?php $i++; }?>
               </div>
             </div>
             
@@ -73,7 +78,7 @@
                   </div>
                   <div class="row justify-content-center">
                     <div class="col-md-4">
-                      <input type="submit" class="btn btn-primary btn-outline-primary btn-block" value="Submit">
+                      <input type="submit" class="btn btn-primary btn-outline-primary btn-block" value="Print">
                       <!-- <p><a href="#" class="btn btn-primary btn-outline-primary btn-sm">Read More</a></p> -->
                     </div>
                   </div>
