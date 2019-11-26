@@ -6,8 +6,8 @@ class Pesanan extends CI_Controller {
 	}
 	
     function index(){
-        $data['pengguna']=$this->m_pengguna->tampil_pengguna()->result(); //panggil function nya
-        $this->load->view('v_pengguna', $data);
+        $data['pesanan']=$this->m_pesanan2->tampil_pengguna()->result(); //panggil function nya
+        $this->load->view('v_pesanan', $data);
     }
 	
 	
