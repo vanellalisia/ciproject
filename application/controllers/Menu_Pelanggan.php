@@ -70,7 +70,7 @@ class Menu_Pelanggan extends CI_Controller{
         );
             $this->m_pesanan->tambah_pesanan('pesanan',$data_pesanan);
             
-            $this->load->view('v_index_pelanggan');
+            $this->load->view('v_detail_pesanan_pelanggan', $data_tampil_pesanan_yangbarudipesan);
     }
    
 }
