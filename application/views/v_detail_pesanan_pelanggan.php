@@ -28,37 +28,20 @@
   <body>
     
 
-    <div class="site-wrap">
+    
       
     <?php include ('headerbar_pelanggan.php')?> 
-      <header class="site-header">
-        <div class="row align-items-center">
-          <div class="col-5 col-md-3">
-             <ul class="list-unstyled social">
-              <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-              <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-              <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-            </ul>
-          </div>
-          <div class="col-2 col-md-6 text-center">
-            <a href="index.html" class="site-logo">D</a>
-          </div>
-          <div class="col-5 col-md-3 text-right menu-burger-wrap">
-            <a href="#" class="site-nav-toggle js-site-nav-toggle"><i></i></a>
-
-          </div>
-        </div>
-       
-      </header> <!-- site-header -->
+      
+       <!-- site-header -->
       
       <div class="main-wrap">
         <div class="cover_1 cover_sm">
-          <div class="img_bg" style="background-image: url(img/slider-1.jpg);" data-stellar-background-ratio="0.5">
+          <div class="img_bg" style="background-image: url(<?php echo base_url('assets/images/slider-1.jpg'); ?>);" data-stellar-background-ratio="0.5">
             <div class="container">
               <div class="row align-items-center justify-content-center">
                 <div class="col-md-7" data-aos="fade-up">
-                  <h2 class="heading">Contact Us</h2>
-                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo saepe dolorum dolorem, iste officia voluptates! Sint repudiandae, soluta voluptatem delectus iure, eaque, harum expedita, nisi aliquam magni odio perferendis ipsum!</p>
+                  <h2 class="heading"align="center">Detail Pesanan Anda</h2>
+                  
                 </div>
               </div>
             </div>
@@ -69,40 +52,24 @@
           <div class="container">
             <div class="row justify-content-center mb-5">
               <div class="col-md-8  text-center">
-                <h2 class="mb-3">Contact Form</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga, alias distinctio voluptatum magni voluptatibus.</p>
+              <h2 class="mb-3">Detail Pesanan</h2>
+              <?php foreach($pesanan_detail as $list){
+                ?>
+                
+                <p class="lead">
+                    <?php 
+                        //echo $list['id_pesanan'];
+                    }
+                    ?>
+                </p>
               </div>
             </div>
+            
             <div class="row justify-content-center">
               <div class="col-md-10 p-5 form-wrap">
                 <form action="#">
                   <div class="row mb-4">
-                    <div class="form-group col-md-4">
-                      <label for="name" class="label">Name</label>
-                      <div class="form-field-icon-wrap">
-                        <span class="icon ion-android-person"></span>
-                        <input type="text" class="form-control" id="name">
-                      </div>
-                    </div>
-                    <div class="form-group col-md-4">
-                      <label for="email" class="label">Email</label>
-                      <div class="form-field-icon-wrap">
-                        <span class="icon ion-email"></span>
-                        <input type="email" class="form-control" id="email">
-                      </div>
-                    </div>
-                    <div class="form-group col-md-4">
-                      <label for="phone" class="label">Phone</label>
-                      <div class="form-field-icon-wrap">
-                        <span class="icon ion-android-call"></span>
-                        <input type="text" class="form-control" id="phone">
-                      </div>
-                    </div>
-
-                   <div class="form-group col-md-12">
-                      <label for="message" class="label">Message</label>
-                     <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
-                   </div>
+                   
                   </div>
                   <div class="row justify-content-center">
                     <div class="col-md-4">
@@ -251,22 +218,22 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- loader -->
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="<?php echo base_url('assets/diner/js/jquery-3.2.1.min.js')?>"></script>
+    <script src="<?php echo base_url('assets/diner/js/jquery-migrate-3.0.1.min.js')?>"></script>
+    <script src="<?php echo base_url('assets/diner/js/popper.min.js')?>"></script>
+    <script src="<?php echo base_url('assets/diner/js/bootstrap.min.js')?>"></script>
+    <script src="<?php echo base_url('assets/diner/js/owl.carousel.min.js')?>"></script>
+    <script src="<?php echo base_url('assets/diner/js/jquery.waypoints.min.js')?>"></script>
 
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
+    <script src="<?php echo base_url('assets/diner/js/bootstrap-datepicker.js')?>"></script>
+    <script src="<?php echo base_url('assets/diner/js/jquery.timepicker.min.js')?>"></script>
+    <script src="<?php echo base_url('assets/diner/js/jquery.stellar.min.js')?>"></script>
 
-    <script src="js/aos.js"></script>
+    <script src="<?php echo base_url('assets/diner/js/aos.js')?>"></script>
     
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 
-    <script src="js/main.js"></script>
+    <script src="<?php echo base_url('assets/diner/js/main.js')?>"></script>
   </body>
 </html>

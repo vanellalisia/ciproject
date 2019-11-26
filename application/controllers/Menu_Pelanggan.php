@@ -59,7 +59,9 @@ class Menu_Pelanggan extends CI_Controller{
             'waktu_ambil'=>$waktuambil,
             'total_harga'=>$totalharga
         );
-        $data_tampil_pesanan_yangbarudipesan=array(
+        $pesanan =$this->input->post('pesanbanyakmakanan'.$a);
+                $id_menu =$this->input->post('id_menu'.$a);
+        $data_tampil_pesanan_yangbarudipesan['pesanan_detail']=array(
             'id_menu' => $id_menu,
             'id_pesanan' => $id_pesanan,
             'jumlah_pesanan' => $pesanan,

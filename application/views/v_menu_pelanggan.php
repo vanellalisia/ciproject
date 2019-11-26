@@ -155,7 +155,7 @@
                   </div>
                     </div> <?php $total2++; } 
                     $total3 = $total2; ?>
-                    <input type="text" name="i" value="<?php echo $total3; ?>">
+                    
                    <!-- .menu-food-item -->
                     <label class="label">Waktu Ambil</label>
                     
