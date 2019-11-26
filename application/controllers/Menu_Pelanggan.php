@@ -23,7 +23,7 @@ class Menu_Pelanggan extends CI_Controller{
         $tanggalambil=date("ymd", strtotime("tomorrow"));
         $waktuambil=$this->input->post('waktuambil');
         $keteranganpesan=$this->input->post('keteranganpesanan');
-       // $pesanan=0;
+        $nama_menu=$this->input>post('nama_menu');
         $totalharga=0; 
 
         for($a=0 ;$a< $bataslooping ; $a++)
@@ -32,9 +32,6 @@ class Menu_Pelanggan extends CI_Controller{
                 $pesanan =$this->input->post('pesanbanyakmakanan'.$a);
                 $id_menu =$this->input->post('id_menu'.$a);
 
-                error_log("looping ke  = ". $a. " harga = ".$harga);
-                error_log("looping ke  = ". $a. " pesanan = ".$pesanan);
-              
                $totalharga=$totalharga+$harga*$pesanan;
                
                 $data = array (
@@ -45,8 +42,6 @@ class Menu_Pelanggan extends CI_Controller{
                 );
                 if($pesanan != '0'){
                 $this->m_pesanan->tambah_detail_pesanan('detail_pesanan',$data);
-
-               
 
                 }
         }
@@ -60,9 +55,10 @@ class Menu_Pelanggan extends CI_Controller{
             'total_harga'=>$totalharga
         );
         $pesanan =$this->input->post('pesanbanyakmakanan'.$a);
-                $id_menu =$this->input->post('id_menu'.$a);
-        $data_tampil_pesanan_yangbarudipesan['pesanan_detail']=array(
+        $id_menu =$this->input->post('id_menu'.$a);
+        $data_tampil_pesanan_yangbarudipesan['pesanan_detail'][]=array(
             'id_menu' => $id_menu,
+
             'id_pesanan' => $id_pesanan,
             'jumlah_pesanan' => $pesanan,
             'keterangan_pesanan' => $keteranganpesan,
@@ -70,10 +66,13 @@ class Menu_Pelanggan extends CI_Controller{
             'tanggal_ambil'=>$tanggalambil,
             'waktu_ambil'=>$waktuambil
         );
+        
+
             $this->m_pesanan->tambah_pesanan('pesanan',$data_pesanan);
             
             $this->load->view('v_detail_pesanan_pelanggan', $data_tampil_pesanan_yangbarudipesan);
     }
+    
    
 }
 ?>
