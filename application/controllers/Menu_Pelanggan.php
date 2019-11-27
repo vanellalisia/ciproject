@@ -13,6 +13,7 @@ class Menu_Pelanggan extends CI_Controller{
     }
     function ambil_pesanan_menu(){
         $this->load->model('m_pesanan');
+        $this->load->model('m_menu');
         $bataslooping = $this->input->post('i');
         $id_pengguna=$this->session->userdata('id_pengguna');
         $tanggalpesan=date("Ymd");
@@ -40,7 +41,11 @@ class Menu_Pelanggan extends CI_Controller{
                     'jumlah_pesanan' => $pesanan,
                     'keterangan_pesanan' => $keteranganpesan
                 );
+                
                 if($pesanan != '0'){
+                    $stok_menu=$this->m_menu->ambilstok("menu",$id_menu)->row_array();
+                    $stock=intval($stok_menu['jumlah_stock_menu']);
+                    $stok_sisa=$stock-$pesanan;
                 $this->m_pesanan->tambah_detail_pesanan('detail_pesanan',$data);
 
                 }
@@ -67,6 +72,8 @@ class Menu_Pelanggan extends CI_Controller{
             'waktu_ambil'=>$waktuambil
         );
         
+            
+            
 
             $this->m_pesanan->tambah_pesanan('pesanan',$data_pesanan);
             $this->m_pesanan->update_stok_menu('menu', $id_menu, $pesanan);

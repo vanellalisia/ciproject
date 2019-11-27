@@ -38,6 +38,9 @@ class m_menu extends CI_Model{
 	
 		
 	}
+	function ambilstok($table, $data){
+		return $this->db->query("SELECT jumlah_stock_menu WHERE id_menu='$data'");
+	}
 	
 	
 }
