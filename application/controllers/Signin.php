@@ -13,6 +13,8 @@ class Signin extends CI_Controller{
 		$name = $this->input->post('nama');
 		$email = $this->input->post('email');
 		$password = $this->input->post('sandi');
+		$telepon=$this->input->post('telepon');
+		$alamat=$this->input->post('alamat');
 		$jabatan = "PL";
 
 		$urutanpengguna=$this->m_pengguna->cekJumlah('detail_pengguna',$jabatan)->num_rows();
@@ -20,6 +22,8 @@ class Signin extends CI_Controller{
 		$data = array(
 			'id_pengguna'		=>	$id,
 			'nama_pengguna'		=>	$nama,
+			'nomor_telepon'		=>  $telepon,
+			'alamat_pengguna'	=>	$alamat,
 			'email_pengguna'	=>	$email,
 			'kata_sandi'		=>	$sandi
 			);

@@ -68,7 +68,7 @@
                                 <input type="submit" class="btn btn-success btn-flat m-b-30 m-t-30" value="Login">
                                
                                 <div class="register-link m-t-15 text-center">
-                                    <p>Don't have account ? <a href="<?php echo base_url('v_signin.php') ?>"> Sign Up Here</a></p>
+                                    <p>Don't have account ? <a href="<?php echo base_url('Signin') ?>"> Sign Up Here</a></p>
                                 </div>
                     </form>
                 </div>

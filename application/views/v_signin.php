@@ -45,8 +45,16 @@
                 <div class="login-form">
                     <form action="<?php echo 'insertData' ?>" method="POST">
                         <div class="form-group">
-                            <label>User Name</label>
-                            <input type="text" class="form-control" placeholder="User Name" name="name">
+                            <label>Nama</label>
+                            <input type="text" class="form-control" placeholder="Nama" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label>Nomor telepon</label>
+                            <input type="number" class="form-control" placeholder="Nomor Telepon" name="telepon">
+                        </div>
+                        <div class="form-group">
+                            <label>Alamat</label>
+                            <input type="text" class="form-control" placeholder="Alamat" name="alamat">
                         </div>
                             <div class="form-group">
                                 <label>Email address</label>
@@ -63,10 +71,7 @@
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
                                     <div class="social-login-content">
-                                        <div class="social-button">
-                                            <button type="button" class="btn social facebook btn-flat btn-addon mb-3"><i class="ti-facebook"></i>Register with facebook</button>
-                                            <button type="button" class="btn social twitter btn-flat btn-addon mt-2"><i class="ti-twitter"></i>Register with twitter</button>
-                                        </div>
+                                        
                                     </div>
                                     
                     </form>
