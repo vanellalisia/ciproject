@@ -11,10 +11,9 @@ class Pesanan extends CI_Controller {
     }
 	
 	function editData($id_pesanan){
-		
-		
-		
-		
+		$where = array('id_pesanan' => $id_pesanan);
+		$data['pesananEdit'] = $this->m_pesanan->editRecord($where,'pesanan')->result();
+		$this->load->view('v_edit_status_pesanan',$data);
 	}
 	
 	
