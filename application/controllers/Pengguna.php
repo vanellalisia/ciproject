@@ -7,7 +7,8 @@ class Pengguna extends CI_Controller {
 	
     function index(){
         $data['pengguna']=$this->m_pengguna->tampil_pengguna()->result(); //panggil function nya
-        $this->load->view('v_pengguna', $data);
+		$this->load->view('v_pengguna', $data);
+		
     }
 	
 	function tambahData(){

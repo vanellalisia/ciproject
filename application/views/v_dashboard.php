@@ -94,10 +94,14 @@
                                 </div>
                             </div>
                         </div>
+                        <?php
+                        $i=0;
+                        foreach($pengguna_dashboard as $list){
+                        ?>
                         <h4 class="mb-0">
-                            <span class="count">10468</span>
+                            <span class="count"><?php echo $i++;}?></span>
                         </h4>
-                        <p class="text-light">Jumlah Pesanan Hari Ini</p>
+                        <p class="text-light">Jumlah Pengguna</p>
 
                         <div class="chart-wrapper px-0" style="height:70px;" height="70">
                             <canvas id="widgetChart1"></canvas>
