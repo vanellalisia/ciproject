@@ -82,31 +82,13 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="card text-white bg-flat-color-1">
                     <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton1" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <?php
-                        $i=0;
-                        foreach($pengguna_dashboard as $list){
-                        ?>
+                        
                         <h4 class="mb-0">
-                            <span class="count"><?php echo $i++;}?></span>
+                            <span class="count"><?php echo $pengguna_dashboard;?></span>
                         </h4>
-                        <p class="text-light">Jumlah Pengguna</p>
+                        <p class="text-light">Jumlah Pelanggan</p>
 
-                        <div class="chart-wrapper px-0" style="height:70px;" height="70">
-                            <canvas id="widgetChart1"></canvas>
-                        </div>
-
+                        
                     </div>
 
                 </div>
@@ -117,25 +99,13 @@
                 <div class="card text-white bg-flat-color-2">
                     <div class="card-body pb-0">
                         <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton2" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
+                            
+                           
                         </div>
                         <h4 class="mb-0">
-                            <span class="count">10468</span>
+                            <span class="count"><?php echo $pengguna_aktif_dashboard;?></span>
                         </h4>
-                        <p class="text-light">Members online</p>
-
-                        <div class="chart-wrapper px-0" style="height:70px;" height="70">
-                            <canvas id="widgetChart2"></canvas>
-                        </div>
+                        <p class="text-light">Pengguna Aktif</p>
 
                     </div>
                 </div>
@@ -146,27 +116,16 @@
                 <div class="card text-white bg-flat-color-3">
                     <div class="card-body pb-0">
                         <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton3" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
+                            
                         </div>
                         <h4 class="mb-0">
-                            <span class="count">10468</span>
+                            <span class="count"><?php echo $pesanan_dashboard;?></span>
                         </h4>
-                        <p class="text-light">Members online</p>
+                        <p class="text-light">Pesanan Untuk Besok</p>
 
                     </div>
 
-                    <div class="chart-wrapper px-0" style="height:70px;" height="70">
-                        <canvas id="widgetChart3"></canvas>
-                    </div>
+                    
                 </div>
             </div>
             <!--/.col-->

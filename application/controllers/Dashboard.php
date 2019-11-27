@@ -6,10 +6,15 @@ class Dashboard extends CI_Controller {
 
     }
     function index(){
-        $this->load->view('v_dashboard');
+        $tanggal_ambil=date("Y-m-d", strtotime("tomorrow"));
+        $data_dashboard['pengguna_aktif_dashboard']=$this->m_dashboard->tampil_pengguna_aktif();
+        $data_dashboard['pengguna_dashboard']=$this->m_dashboard->tampil_pengguna_dashboard();
+        $data_dashboard['pesanan_dashboard']=$this->m_dashboard->tampil_pesanan_dashboard("pesanan", $tanggal_ambil);
+        $this->load->view('v_dashboard',$data_dashboard);
     }
     function dashboard_pelanggan(){
         $this->load->view('v_index_pelanggan');
     }
+    
 }
 ?>

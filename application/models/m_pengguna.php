@@ -43,9 +43,7 @@ class m_pengguna extends CI_Model{
 	function ambilidpengguna($table, $data){
 		return $this->db->get_where($table, $data);
 	}
-	function tampil_pengguna_dashboard(){
-		return $this->db->query('select a.id_pengguna, a.nama_pengguna, a.email_pengguna, a.kata_sandi, a.nomor_telepon, a.alamat_pengguna, a.status_pengguna, a.tanggal_masuk, b.id_pengguna, b.id_jabatan, c.id_jabatan, c.nama_jabatan  FROM pengguna a JOIN detail_pengguna b ON a.id_pengguna = b.id_pengguna JOIN jabatan c ON b.id_jabatan = c.id_jabatan');
-	}
+	
 	
 	
 }
