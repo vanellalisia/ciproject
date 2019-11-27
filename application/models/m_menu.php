@@ -39,9 +39,18 @@ class m_menu extends CI_Model{
 		
 	}
 	function ambilstok($table, $data){
-		return $this->db->query("SELECT jumlah_stock_menu WHERE id_menu='$data'");
+		return $this->db->query("SELECT jumlah_stock_menu FROM menu WHERE id_menu='$data'");
 	}
-	
+	function update_stok($table,$data, $where){
+		$this->db->where($where);
+		$this->db->update($table,$data);
+	}
+	function tampil_detail_menu($id_menu){
+		$where = array(
+			"id_menu" => $id_menu
+		);
+		return $this->db->get_where("menu",$where);
+	}
 	
 }
 

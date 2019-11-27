@@ -63,6 +63,7 @@
                   </li>
                 </ul>
                 <form action="<?php echo base_url().'Menu_Pelanggan/ambil_pesanan_menu' ?>"method="POST">
+                <input type = "hidden" name = "jumlah_menu" value = "<?php echo $jumlah_makanan + $jumlah_minuman + $jumlah_snack;?>">
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
                     <?php
@@ -70,7 +71,6 @@
                     foreach($makanan as $list){ ?>
                     <div class="d-block d-md-flex menu-food-item">
                       <div class="text order-1 mb-3">
-                        
                         <input type="hidden" name="id_menu<?=$i?>" value="<?php echo $list->id_menu?>">
                         <input type="hidden" name="nama_menu<?=$i?>" value="<?php echo $list->nama_menu?>">
                         <input type="hidden" name="harga_menu<?=$i?>" value="<?php echo $list->harga_menu?>">

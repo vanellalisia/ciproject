@@ -61,7 +61,11 @@
                 <p class="lead">
                     ID_Pesanan: <?php echo ($list['id_pesanan']);?><br>
                     
-                    Daftar Makanan: <?php echo ($list['jumlah_pesanan']);?> <?php echo ($list['id_menu']);?><br>
+                    Daftar Makanan: 
+                    <br>
+                    <?php for($a = 0; $a<count($menu_terpesan); $a++):?>
+                    <?php echo $menu_terpesan[$a]["jumlah_menu"]." ".$menu_terpesan[$a]["nama_menu"];?><br/>
+                    <?php endfor;?>
                     Total Harga : <?php echo ($list['total_harga']);?><br>
                     Tanggal/Waktu Ambil: <?php echo ($list['tanggal_ambil']);?> / <?php echo ($list['waktu_ambil']);?><br>
                     Keterangan: <?php echo ($list['keterangan_pesanan']);?>
