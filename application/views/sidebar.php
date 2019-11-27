@@ -26,17 +26,11 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Pesanan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Tabel Pesanan</a></li>
+                            <li><i class="fa fa-table"></i><a href="<?php echo base_url('Pesanan') ?>">Tabel Pesanan</a></li>
                             <li><i class="fa fa-table"></i><a href="tables-data.html">Bukti</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Transaksi</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html">Tabel Transaksi</a></li>
-                            <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html"></a></li>
-                        </ul>
-                    </li>
+                    
 
                     <h3 class="menu-title">Icons</h3><!-- /.menu-title -->
 
