@@ -64,11 +64,7 @@
                                     <label>Password</label>
                                     <input type="password" class="form-control" placeholder="Password" name="password">
                         </div>
-                                    <div class="checkbox">
-                                        <label>
-                                <input type="checkbox" required> Agree the terms and policy
-                            </label>
-                                    </div>
+                                    <input type="hidden"name="tanggal_masuk"value="<?php echo date("Y-m-d"); ?>">
                                     <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
                                     <div class="social-login-content">
                                         
